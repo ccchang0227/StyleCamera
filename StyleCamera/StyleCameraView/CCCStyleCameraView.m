@@ -568,7 +568,6 @@
 
 - (CIImage*)_processedImageFromSampleBuffer:(CMSampleBufferRef)sampleBuffer {
     CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
-    
     /*
     size_t w, h;
     CVPixelBufferLockBaseAddress(imageBuffer, 0);
@@ -578,8 +577,9 @@
     
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
     */
-    
-    //TODO: 合上tensorflow?
+    if (_delegate && [_delegate respondsToSelector:@selector(cccStyleCameraView:processPreview:)]) {
+        imageBuffer = [_delegate cccStyleCameraView:self processPreview:imageBuffer];
+    }
     
     CIImage *sourceImage = [CIImage imageWithCVPixelBuffer:(CVPixelBufferRef)imageBuffer options:nil];
     CGSize imageSize = CGSizeMake(CGRectGetHeight(sourceImage.extent), CGRectGetWidth(sourceImage.extent));

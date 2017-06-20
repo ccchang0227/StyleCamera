@@ -33,6 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)cccStyleCameraViewDidStart:(CCCStyleCameraView *)cameraView;
 - (void)cccStyleCameraViewDidStop:(CCCStyleCameraView *)cameraView;
 
+- (CVImageBufferRef)cccStyleCameraView:(CCCStyleCameraView *)cameraView
+                        processPreview:(CVImageBufferRef)imageBuffer;
+
 @end
 
 NS_ASSUME_NONNULL_END

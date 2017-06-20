@@ -110,4 +110,12 @@
     });
 }
 
+- (CVImageBufferRef)cccStyleCameraView:(CCCStyleCameraView *)cameraView
+                        processPreview:(CVImageBufferRef)imageBuffer {
+    
+    //TODO: 合上tensorflow?
+    
+    return imageBuffer;
+}
+
 @end

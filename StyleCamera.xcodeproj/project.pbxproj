@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		90D04C5B1EF8ED8A00133EE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */; };
-		90D04C5E1EF8ED8A00133EE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C5D1EF8ED8A00133EE1 /* ViewController.m */; };
+		90D04C5E1EF8ED8A00133EE1 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C5D1EF8ED8A00133EE1 /* ViewController.mm */; };
 		90D04C611EF8ED8A00133EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D04C5F1EF8ED8A00133EE1 /* Main.storyboard */; };
 		90D04C6F1EF8EFDF00133EE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D04C6D1EF8EFDF00133EE1 /* LaunchScreen.storyboard */; };
 		90D04C751EF8EFED00133EE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D04C721EF8EFED00133EE1 /* Assets.xcassets */; };
 		90D04C771EF8EFED00133EE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C741EF8EFED00133EE1 /* main.m */; };
 		90D04C7A1EF8F02D00133EE1 /* CCCStyleCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C791EF8F02D00133EE1 /* CCCStyleCameraView.m */; };
+		90D04C7E1EF917FE00133EE1 /* libtensorflow-core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D04C7D1EF917FE00133EE1 /* libtensorflow-core.a */; };
+		90D04C811EF9182500133EE1 /* libprotobuf-lite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D04C7F1EF9182500133EE1 /* libprotobuf-lite.a */; };
+		90D04C821EF9182500133EE1 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D04C801EF9182500133EE1 /* libprotobuf.a */; };
+		90D04C841EF91B9D00133EE1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D04C831EF91B9D00133EE1 /* Accelerate.framework */; };
+		90D04C891EF91E7E00133EE1 /* stylize_quantized.pb in Resources */ = {isa = PBXBuildFile; fileRef = 90D04C861EF91E7E00133EE1 /* stylize_quantized.pb */; };
+		90D04C8A1EF91E7E00133EE1 /* tensorflow_utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C881EF91E7E00133EE1 /* tensorflow_utils.mm */; };
 		DF7FC6F60EE7B5030C86A825 /* libPods-StyleCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1046368944116AC1B78B56F /* libPods-StyleCamera.a */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +29,7 @@
 		90D04C591EF8ED8A00133EE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		90D04C5C1EF8ED8A00133EE1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		90D04C5D1EF8ED8A00133EE1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		90D04C5D1EF8ED8A00133EE1 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		90D04C601EF8ED8A00133EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90D04C6E1EF8EFDF00133EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90D04C721EF8EFED00133EE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,6 +37,13 @@
 		90D04C741EF8EFED00133EE1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90D04C781EF8F02D00133EE1 /* CCCStyleCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCStyleCameraView.h; sourceTree = "<group>"; };
 		90D04C791EF8F02D00133EE1 /* CCCStyleCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCStyleCameraView.m; sourceTree = "<group>"; };
+		90D04C7D1EF917FE00133EE1 /* libtensorflow-core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtensorflow-core.a"; path = "../../../../tensorflow_ios_lib/lib/libtensorflow-core.a"; sourceTree = "<group>"; };
+		90D04C7F1EF9182500133EE1 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "../../../../tensorflow_ios_lib/protobuf_ios/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
+		90D04C801EF9182500133EE1 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = ../../../../tensorflow_ios_lib/protobuf_ios/lib/libprotobuf.a; sourceTree = "<group>"; };
+		90D04C831EF91B9D00133EE1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		90D04C861EF91E7E00133EE1 /* stylize_quantized.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = stylize_quantized.pb; sourceTree = "<group>"; };
+		90D04C871EF91E7E00133EE1 /* tensorflow_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tensorflow_utils.h; sourceTree = "<group>"; };
+		90D04C881EF91E7E00133EE1 /* tensorflow_utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tensorflow_utils.mm; sourceTree = "<group>"; };
 		B5ACB4575001042F673E942D /* Pods-StyleCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StyleCamera/Pods-StyleCamera.debug.xcconfig"; sourceTree = "<group>"; };
 		D1046368944116AC1B78B56F /* libPods-StyleCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StyleCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -40,7 +53,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D04C841EF91B9D00133EE1 /* Accelerate.framework in Frameworks */,
+				90D04C821EF9182500133EE1 /* libprotobuf.a in Frameworks */,
 				DF7FC6F60EE7B5030C86A825 /* libPods-StyleCamera.a in Frameworks */,
+				90D04C7E1EF917FE00133EE1 /* libtensorflow-core.a in Frameworks */,
+				90D04C811EF9182500133EE1 /* libprotobuf-lite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,11 +94,12 @@
 		90D04C551EF8ED8A00133EE1 /* StyleCamera */ = {
 			isa = PBXGroup;
 			children = (
+				90D04C7C1EF917EA00133EE1 /* Tensorflow */,
 				90D04C701EF8EFED00133EE1 /* StyleCameraView */,
 				90D04C591EF8ED8A00133EE1 /* AppDelegate.h */,
 				90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */,
 				90D04C5C1EF8ED8A00133EE1 /* ViewController.h */,
-				90D04C5D1EF8ED8A00133EE1 /* ViewController.m */,
+				90D04C5D1EF8ED8A00133EE1 /* ViewController.mm */,
 				90D04C5F1EF8ED8A00133EE1 /* Main.storyboard */,
 				90D04C6D1EF8EFDF00133EE1 /* LaunchScreen.storyboard */,
 				90D04C711EF8EFED00133EE1 /* Supporting Files */,
@@ -108,9 +126,31 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		90D04C7C1EF917EA00133EE1 /* Tensorflow */ = {
+			isa = PBXGroup;
+			children = (
+				90D04C851EF91E7E00133EE1 /* Model */,
+				90D04C871EF91E7E00133EE1 /* tensorflow_utils.h */,
+				90D04C881EF91E7E00133EE1 /* tensorflow_utils.mm */,
+				90D04C7F1EF9182500133EE1 /* libprotobuf-lite.a */,
+				90D04C801EF9182500133EE1 /* libprotobuf.a */,
+				90D04C7D1EF917FE00133EE1 /* libtensorflow-core.a */,
+			);
+			path = Tensorflow;
+			sourceTree = "<group>";
+		};
+		90D04C851EF91E7E00133EE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90D04C861EF91E7E00133EE1 /* stylize_quantized.pb */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DFC340A4B642D62249484D6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				90D04C831EF91B9D00133EE1 /* Accelerate.framework */,
 				D1046368944116AC1B78B56F /* libPods-StyleCamera.a */,
 			);
 			name = Frameworks;
@@ -178,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D04C891EF91E7E00133EE1 /* stylize_quantized.pb in Resources */,
 				90D04C611EF8ED8A00133EE1 /* Main.storyboard in Resources */,
 				90D04C751EF8EFED00133EE1 /* Assets.xcassets in Resources */,
 				90D04C6F1EF8EFDF00133EE1 /* LaunchScreen.storyboard in Resources */,
@@ -239,9 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90D04C5E1EF8ED8A00133EE1 /* ViewController.m in Sources */,
+				90D04C5E1EF8ED8A00133EE1 /* ViewController.mm in Sources */,
 				90D04C7A1EF8F02D00133EE1 /* CCCStyleCameraView.m in Sources */,
 				90D04C771EF8EFED00133EE1 /* main.m in Sources */,
+				90D04C8A1EF91E7E00133EE1 /* tensorflow_utils.mm in Sources */,
 				90D04C5B1EF8ED8A00133EE1 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +317,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -293,6 +335,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -309,11 +352,28 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/downloads/protobuf/src",
+					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/downloads",
+					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/downloads/eigen",
+					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/gen/proto",
+					"$(TENSORFLOW_ROOT)",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(TENSORFLOW_LIB_ROOT)/lib",
+					"$(TENSORFLOW_LIB_ROOT)/protobuf_ios/lib",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(TENSORFLOW_LIB_ROOT)/lib/libtensorflow-core.a",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TENSORFLOW_LIB_ROOT = "$(HOME)/Desktop/tensorflow_ios_lib";
+				TENSORFLOW_ROOT = "$(HOME)/Desktop/tensorflow";
 			};
 			name = Debug;
 		};
@@ -324,7 +384,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -342,6 +402,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -352,10 +413,27 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/downloads/protobuf/src",
+					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/downloads",
+					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/downloads/eigen",
+					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/gen/proto",
+					"$(TENSORFLOW_ROOT)",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(TENSORFLOW_LIB_ROOT)/lib",
+					"$(TENSORFLOW_LIB_ROOT)/protobuf_ios/lib",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(TENSORFLOW_LIB_ROOT)/lib/libtensorflow-core.a",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TENSORFLOW_LIB_ROOT = "$(HOME)/Desktop/tensorflow_ios_lib";
+				TENSORFLOW_ROOT = "$(HOME)/Desktop/tensorflow";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -365,6 +443,7 @@
 			baseConfigurationReference = B5ACB4575001042F673E942D /* Pods-StyleCamera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DEVELOPMENT_TEAM = 6JSL3X52E8;
 				ENABLE_BITCODE = NO;
@@ -381,6 +460,7 @@
 			baseConfigurationReference = 2CFC4F8EF673434164902D8F /* Pods-StyleCamera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DEVELOPMENT_TEAM = 6JSL3X52E8;
 				ENABLE_BITCODE = NO;
