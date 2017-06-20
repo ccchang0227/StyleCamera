@@ -1,0 +1,152 @@
+{
+  "name": "CCCUIKit",
+  "version": "1.0.4-beta",
+  "summary": "C.C.Chang's custom UIKit.",
+  "homepage": "https://github.com/ccchang0227/CCCUIKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Chih-chieh Chang": "ccch.realtouch@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/ccchang0227/CCCUIKit.git",
+    "tag": "1.0.4-beta"
+  },
+  "platforms": {
+    "ios": "6.0"
+  },
+  "source_files": "Classes/CCCUIKit.h",
+  "frameworks": "UIKit",
+  "subspecs": [
+    {
+      "name": "UIKit+CCCAdditions",
+      "requires_arc": false,
+      "platforms": {
+        "ios": "6.0",
+        "tvos": "9.0"
+      },
+      "source_files": "Classes/UIKit+CCCAdditions/**/*.{h,m}"
+    },
+    {
+      "name": "CCCAssetsViewController",
+      "requires_arc": false,
+      "source_files": "Classes/CCCAssetsViewController/*.{h,m}",
+      "resources": [
+        "Classes/CCCAssetsViewController/*.xib",
+        "Assets/CCCAssets_*.png"
+      ],
+      "frameworks": [
+        "AssetsLibrary",
+        "MediaPlayer"
+      ],
+      "weak_frameworks": "Photos",
+      "subspecs": [
+        {
+          "name": "CCCAssetsModel",
+          "source_files": "Classes/CCCAssetsViewController/CCCAssetsModel/*.{h,m}"
+        },
+        {
+          "name": "ChildrenViewControllers",
+          "source_files": "Classes/CCCAssetsViewController/ChildrenViewControllers/*.{h,m}",
+          "resources": "Classes/CCCAssetsViewController/ChildrenViewControllers/*.xib",
+          "dependencies": {
+            "CCCUIKit/CCCAssetsViewController/CCCAssetsModel": [
+
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "CCCCamera",
+      "requires_arc": false,
+      "source_files": "Classes/CCCCamera/**/*.{h,m}",
+      "resources": "Assets/CCCCamera_*.png",
+      "frameworks": [
+        "AVFoundation",
+        "ImageIO",
+        "MobileCoreServices",
+        "CoreMotion",
+        "CoreImage"
+      ]
+    },
+    {
+      "name": "CCCCanvas",
+      "requires_arc": false,
+      "source_files": "Classes/CCCCanvas/**/*.{h,m}",
+      "frameworks": "AVFoundation",
+      "dependencies": {
+        "CCCUIKit/CCCSlider": [
+
+        ]
+      }
+    },
+    {
+      "name": "CCCCycleView",
+      "requires_arc": false,
+      "source_files": "Classes/CCCCycleView/*.{h,m}",
+      "frameworks": [
+        "GLKit",
+        "CoreGraphics",
+        "QuartzCore"
+      ],
+      "subspecs": [
+        {
+          "name": "XYPieChart",
+          "requires_arc": true,
+          "source_files": "Classes/CCCCycleView/XYPieChart/*.{h,m}"
+        }
+      ]
+    },
+    {
+      "name": "CCCDevice",
+      "requires_arc": false,
+      "platforms": {
+        "ios": "6.0",
+        "tvos": "9.0"
+      },
+      "source_files": "Classes/CCCDevice/**/*.{h,m}"
+    },
+    {
+      "name": "CCCMaskedLabel",
+      "requires_arc": false,
+      "source_files": "Classes/CCCMaskedLabel/**/*.{h,m}"
+    },
+    {
+      "name": "CCCPageControl",
+      "requires_arc": false,
+      "source_files": "Classes/CCCPageControl/**/*.{h,m}"
+    },
+    {
+      "name": "CCCRatingControl",
+      "requires_arc": false,
+      "source_files": "Classes/CCCRatingControl/**/*.{h,m}"
+    },
+    {
+      "name": "CCCRecycleScrollView",
+      "requires_arc": false,
+      "source_files": "Classes/CCCRecycleScrollView/**/*.{h,m}"
+    },
+    {
+      "name": "CCCSlider",
+      "requires_arc": false,
+      "source_files": "Classes/CCCSlider/**/*.{h,m}"
+    },
+    {
+      "name": "CCCSlidingViewController",
+      "requires_arc": false,
+      "source_files": "Classes/CCCSlidingViewController/**/*.{h,m}"
+    },
+    {
+      "name": "CCCSwitch",
+      "requires_arc": false,
+      "platforms": {
+        "ios": "6.0",
+        "tvos": "9.0"
+      },
+      "source_files": "Classes/CCCSwitch/**/*.{h,m}"
+    }
+  ]
+}

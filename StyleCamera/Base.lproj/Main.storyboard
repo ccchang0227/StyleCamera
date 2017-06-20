@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nUT-lI-nGP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="DyH-MD-Vre">
+            <objects>
+                <navigationController id="nUT-lI-nGP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IHR-7Z-qch">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SvN-N1-dRS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lts-TI-2U6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-782" y="139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4aH-3z-8hD" customClass="CCCStyleCameraView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="? x ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgI-Uf-Sa8">
+                                <rect key="frame" x="10" y="74" width="47" height="23"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4aH-3z-8hD" secondAttribute="trailing" id="OLA-6M-dIf"/>
+                            <constraint firstItem="4aH-3z-8hD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VYd-5a-5IK"/>
+                            <constraint firstItem="UgI-Uf-Sa8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="WRa-PA-TB7"/>
+                            <constraint firstItem="4aH-3z-8hD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="czq-3k-Ys6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4aH-3z-8hD" secondAttribute="bottom" id="sXf-D7-gSf"/>
+                            <constraint firstItem="UgI-Uf-Sa8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="vQd-ER-DqR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ey7-tu-Mv3">
+                        <barButtonItem key="rightBarButtonItem" image="switch" id="sxV-ak-YTI">
+                            <connections>
+                                <action selector="switchCamera:" destination="BYZ-38-t0r" id="viK-eK-x1M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="previewSizeLabel" destination="UgI-Uf-Sa8" id="FMe-eD-PET"/>
+                        <outlet property="styleCameraView" destination="4aH-3z-8hD" id="L3r-eO-aOc"/>
+                        <outlet property="switchButton" destination="sxV-ak-YTI" id="BiZ-ra-g4H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="switch" width="40" height="40"/>
+    </resources>
+</document>

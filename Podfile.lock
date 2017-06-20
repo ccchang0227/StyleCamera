@@ -1,0 +1,16 @@
+PODS:
+  - CCCUIKit/CCCCamera (1.0.4-beta)
+
+DEPENDENCIES:
+  - CCCUIKit/CCCCamera (from `~/Desktop/iOS/Pods/CCCUIKit`)
+
+EXTERNAL SOURCES:
+  CCCUIKit:
+    :path: "~/Desktop/iOS/Pods/CCCUIKit"
+
+SPEC CHECKSUMS:
+  CCCUIKit: 1d31f7355ab5fad8806e8d348a956e3ce7e8e248
+
+PODFILE CHECKSUM: d934cba0577a962216023d74a2f756100e634ccd
+
+COCOAPODS: 1.2.0

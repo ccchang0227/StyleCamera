@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90D04C5B1EF8ED8A00133EE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */; };
+		90D04C5E1EF8ED8A00133EE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C5D1EF8ED8A00133EE1 /* ViewController.m */; };
+		90D04C611EF8ED8A00133EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D04C5F1EF8ED8A00133EE1 /* Main.storyboard */; };
+		90D04C6F1EF8EFDF00133EE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D04C6D1EF8EFDF00133EE1 /* LaunchScreen.storyboard */; };
+		90D04C751EF8EFED00133EE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D04C721EF8EFED00133EE1 /* Assets.xcassets */; };
+		90D04C771EF8EFED00133EE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C741EF8EFED00133EE1 /* main.m */; };
+		90D04C7A1EF8F02D00133EE1 /* CCCStyleCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C791EF8F02D00133EE1 /* CCCStyleCameraView.m */; };
+		DF7FC6F60EE7B5030C86A825 /* libPods-StyleCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1046368944116AC1B78B56F /* libPods-StyleCamera.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2CFC4F8EF673434164902D8F /* Pods-StyleCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleCamera.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleCamera/Pods-StyleCamera.release.xcconfig"; sourceTree = "<group>"; };
+		90D04C531EF8ED8A00133EE1 /* StyleCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90D04C591EF8ED8A00133EE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		90D04C5C1EF8ED8A00133EE1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		90D04C5D1EF8ED8A00133EE1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		90D04C601EF8ED8A00133EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90D04C6E1EF8EFDF00133EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		90D04C721EF8EFED00133EE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90D04C731EF8EFED00133EE1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90D04C741EF8EFED00133EE1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		90D04C781EF8F02D00133EE1 /* CCCStyleCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCStyleCameraView.h; sourceTree = "<group>"; };
+		90D04C791EF8F02D00133EE1 /* CCCStyleCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCStyleCameraView.m; sourceTree = "<group>"; };
+		B5ACB4575001042F673E942D /* Pods-StyleCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StyleCamera/Pods-StyleCamera.debug.xcconfig"; sourceTree = "<group>"; };
+		D1046368944116AC1B78B56F /* libPods-StyleCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StyleCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90D04C501EF8ED8A00133EE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF7FC6F60EE7B5030C86A825 /* libPods-StyleCamera.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		745D9CAE3B5B7A8268223E6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5ACB4575001042F673E942D /* Pods-StyleCamera.debug.xcconfig */,
+				2CFC4F8EF673434164902D8F /* Pods-StyleCamera.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		90D04C4A1EF8ED8A00133EE1 = {
+			isa = PBXGroup;
+			children = (
+				90D04C551EF8ED8A00133EE1 /* StyleCamera */,
+				90D04C541EF8ED8A00133EE1 /* Products */,
+				745D9CAE3B5B7A8268223E6B /* Pods */,
+				DFC340A4B642D62249484D6B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		90D04C541EF8ED8A00133EE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90D04C531EF8ED8A00133EE1 /* StyleCamera.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90D04C551EF8ED8A00133EE1 /* StyleCamera */ = {
+			isa = PBXGroup;
+			children = (
+				90D04C701EF8EFED00133EE1 /* StyleCameraView */,
+				90D04C591EF8ED8A00133EE1 /* AppDelegate.h */,
+				90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */,
+				90D04C5C1EF8ED8A00133EE1 /* ViewController.h */,
+				90D04C5D1EF8ED8A00133EE1 /* ViewController.m */,
+				90D04C5F1EF8ED8A00133EE1 /* Main.storyboard */,
+				90D04C6D1EF8EFDF00133EE1 /* LaunchScreen.storyboard */,
+				90D04C711EF8EFED00133EE1 /* Supporting Files */,
+			);
+			path = StyleCamera;
+			sourceTree = "<group>";
+		};
+		90D04C701EF8EFED00133EE1 /* StyleCameraView */ = {
+			isa = PBXGroup;
+			children = (
+				90D04C781EF8F02D00133EE1 /* CCCStyleCameraView.h */,
+				90D04C791EF8F02D00133EE1 /* CCCStyleCameraView.m */,
+			);
+			path = StyleCameraView;
+			sourceTree = "<group>";
+		};
+		90D04C711EF8EFED00133EE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90D04C721EF8EFED00133EE1 /* Assets.xcassets */,
+				90D04C731EF8EFED00133EE1 /* Info.plist */,
+				90D04C741EF8EFED00133EE1 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFC340A4B642D62249484D6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1046368944116AC1B78B56F /* libPods-StyleCamera.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90D04C521EF8ED8A00133EE1 /* StyleCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90D04C6A1EF8ED8A00133EE1 /* Build configuration list for PBXNativeTarget "StyleCamera" */;
+			buildPhases = (
+				3F74AA7E24D8259D79E76788 /* [CP] Check Pods Manifest.lock */,
+				90D04C4F1EF8ED8A00133EE1 /* Sources */,
+				90D04C501EF8ED8A00133EE1 /* Frameworks */,
+				90D04C511EF8ED8A00133EE1 /* Resources */,
+				2ABD853439B7AD7B167526DF /* [CP] Embed Pods Frameworks */,
+				99C7D881C1B666442A5830E7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StyleCamera;
+			productName = StyleCamera;
+			productReference = 90D04C531EF8ED8A00133EE1 /* StyleCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90D04C4B1EF8ED8A00133EE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = realtouchapp;
+				TargetAttributes = {
+					90D04C521EF8ED8A00133EE1 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6JSL3X52E8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 90D04C4E1EF8ED8A00133EE1 /* Build configuration list for PBXProject "StyleCamera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90D04C4A1EF8ED8A00133EE1;
+			productRefGroup = 90D04C541EF8ED8A00133EE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90D04C521EF8ED8A00133EE1 /* StyleCamera */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90D04C511EF8ED8A00133EE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D04C611EF8ED8A00133EE1 /* Main.storyboard in Resources */,
+				90D04C751EF8EFED00133EE1 /* Assets.xcassets in Resources */,
+				90D04C6F1EF8EFDF00133EE1 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2ABD853439B7AD7B167526DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StyleCamera/Pods-StyleCamera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F74AA7E24D8259D79E76788 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		99C7D881C1B666442A5830E7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StyleCamera/Pods-StyleCamera-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90D04C4F1EF8ED8A00133EE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D04C5E1EF8ED8A00133EE1 /* ViewController.m in Sources */,
+				90D04C7A1EF8F02D00133EE1 /* CCCStyleCameraView.m in Sources */,
+				90D04C771EF8EFED00133EE1 /* main.m in Sources */,
+				90D04C5B1EF8ED8A00133EE1 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		90D04C5F1EF8ED8A00133EE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90D04C601EF8ED8A00133EE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		90D04C6D1EF8EFDF00133EE1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90D04C6E1EF8EFDF00133EE1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90D04C681EF8ED8A00133EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90D04C691EF8ED8A00133EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90D04C6B1EF8ED8A00133EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5ACB4575001042F673E942D /* Pods-StyleCamera.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DEVELOPMENT_TEAM = 6JSL3X52E8;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/StyleCamera/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.realtouchapp.StyleCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		90D04C6C1EF8ED8A00133EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CFC4F8EF673434164902D8F /* Pods-StyleCamera.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DEVELOPMENT_TEAM = 6JSL3X52E8;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/StyleCamera/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.realtouchapp.StyleCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90D04C4E1EF8ED8A00133EE1 /* Build configuration list for PBXProject "StyleCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D04C681EF8ED8A00133EE1 /* Debug */,
+				90D04C691EF8ED8A00133EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90D04C6A1EF8ED8A00133EE1 /* Build configuration list for PBXNativeTarget "StyleCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D04C6B1EF8ED8A00133EE1 /* Debug */,
+				90D04C6C1EF8ED8A00133EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90D04C4B1EF8ED8A00133EE1 /* Project object */;
+}

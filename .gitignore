@@ -1,0 +1,7 @@
+# XCode user specific files: http://iosdevelopersnote.blogspot.tw/2013/01/git-xcode-git.html
+xcuserdata/
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.pbxuser
+output
