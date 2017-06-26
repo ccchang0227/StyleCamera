@@ -61,9 +61,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ey7-tu-Mv3">
-                        <barButtonItem key="rightBarButtonItem" image="switch" id="sxV-ak-YTI">
+                        <barButtonItem key="leftBarButtonItem" image="switch" id="sxV-ak-YTI">
                             <connections>
                                 <action selector="switchCamera:" destination="BYZ-38-t0r" id="viK-eK-x1M"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="close" id="jVw-Mt-EWz">
+                            <connections>
+                                <action selector="closeAction:" destination="BYZ-38-t0r" id="Lmm-7S-D8E"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -80,7 +85,7 @@
         <!--Navigation Controller-->
         <scene sceneID="eMZ-Pf-aQk">
             <objects>
-                <navigationController id="XCc-dS-i2H" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="XCc-dS-i2H" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gI0-rd-8e4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -105,19 +110,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaO-Y6-2CT">
-                                <rect key="frame" x="140" y="84" width="94" height="38"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
-                                <state key="normal" title="Camera"/>
-                                <connections>
-                                    <segue destination="nUT-lI-nGP" kind="presentation" id="pXY-hG-TcO"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="ejL-Sj-PiL">
-                                <rect key="frame" x="16" y="132" width="343" height="445"/>
+                                <rect key="frame" x="16" y="78" width="343" height="469"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4H-hx-9Q3">
+                                <rect key="frame" x="16" y="552" width="343" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nn2-X5-kVq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvZ-Bj-wZC">
                                 <rect key="frame" x="16" y="587" width="343" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -136,32 +142,46 @@
                                     <outlet property="delegate" destination="lhc-ZQ-dLf" id="deY-K9-xZj"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaO-Y6-2CT">
+                                <rect key="frame" x="121" y="30" width="132" height="38"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                                <state key="normal" title="Style Camera"/>
+                                <connections>
+                                    <segue destination="nUT-lI-nGP" kind="presentation" id="pXY-hG-TcO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bvZ-Bj-wZC" firstAttribute="top" secondItem="ejL-Sj-PiL" secondAttribute="bottom" constant="10" id="A5U-Co-1NA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a4H-hx-9Q3" secondAttribute="trailing" id="BGS-8d-snp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ejL-Sj-PiL" secondAttribute="trailing" id="BmH-ia-iy4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bvZ-Bj-wZC" secondAttribute="trailing" id="DIV-Ay-Mtw"/>
                             <constraint firstItem="bvZ-Bj-wZC" firstAttribute="leading" secondItem="fgq-Y5-kDK" secondAttribute="leadingMargin" id="GkW-i7-AuI"/>
-                            <constraint firstItem="VaO-Y6-2CT" firstAttribute="top" secondItem="yBp-i5-qgL" secondAttribute="bottom" constant="20" id="Gnf-fZ-lmQ"/>
+                            <constraint firstItem="VaO-Y6-2CT" firstAttribute="top" secondItem="yBp-i5-qgL" secondAttribute="bottom" constant="10" id="Gnf-fZ-lmQ"/>
                             <constraint firstItem="ejL-Sj-PiL" firstAttribute="top" secondItem="VaO-Y6-2CT" secondAttribute="bottom" constant="10" id="HSu-qo-CG9"/>
+                            <constraint firstItem="a4H-hx-9Q3" firstAttribute="leading" secondItem="fgq-Y5-kDK" secondAttribute="leadingMargin" id="Ipl-j4-FQC"/>
+                            <constraint firstItem="bvZ-Bj-wZC" firstAttribute="top" secondItem="a4H-hx-9Q3" secondAttribute="bottom" constant="5" id="NLN-L3-3Ip"/>
                             <constraint firstItem="ejL-Sj-PiL" firstAttribute="leading" secondItem="fgq-Y5-kDK" secondAttribute="leadingMargin" id="NMy-7L-aIL"/>
+                            <constraint firstItem="a4H-hx-9Q3" firstAttribute="top" secondItem="ejL-Sj-PiL" secondAttribute="bottom" constant="5" id="STa-iJ-g8f"/>
                             <constraint firstItem="VaO-Y6-2CT" firstAttribute="centerX" secondItem="fgq-Y5-kDK" secondAttribute="centerX" id="jEF-TS-PDn"/>
                             <constraint firstItem="0cL-gI-YQG" firstAttribute="top" secondItem="bvZ-Bj-wZC" secondAttribute="bottom" id="vB8-8K-XEP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H1h-lw-5Yd"/>
                     <connections>
+                        <outlet property="debugLabel" destination="a4H-hx-9Q3" id="QP6-zc-xxn"/>
                         <outlet property="sampleImageView" destination="ejL-Sj-PiL" id="WZv-gC-O0L"/>
                         <outlet property="stylesCollectionView" destination="bvZ-Bj-wZC" id="520-2Y-KbE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFM-hC-fnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-682" y="602"/>
+            <point key="canvasLocation" x="-682.39999999999998" y="601.34932533733138"/>
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="40" height="40"/>
         <image name="sample.jpeg" width="188" height="268"/>
         <image name="switch" width="40" height="40"/>
     </resources>

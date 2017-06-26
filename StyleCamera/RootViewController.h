@@ -6,8 +6,8 @@
 //  Copyright © 2017年 realtouchapp. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface RootViewController : UIViewController
+@interface RootViewController : BaseViewController
 
 @end

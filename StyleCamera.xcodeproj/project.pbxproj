@@ -11,7 +11,13 @@
 		904B72391F00A6A7008BA7AC /* StyleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 904B72371F00A6A7008BA7AC /* StyleCollectionViewCell.m */; };
 		904B723A1F00A6A7008BA7AC /* StyleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904B72381F00A6A7008BA7AC /* StyleCollectionViewCell.xib */; };
 		904B723D1F00AA23008BA7AC /* ios_image_load.mm in Sources */ = {isa = PBXBuildFile; fileRef = 904B723C1F00AA23008BA7AC /* ios_image_load.mm */; };
-		904B72421F00ABF1008BA7AC /* sample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 904B72411F00ABF1008BA7AC /* sample.jpeg */; };
+		904B72451F00D1D4008BA7AC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904B72441F00D1D4008BA7AC /* BaseViewController.m */; };
+		904B72481F00E411008BA7AC /* tensor_style_utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 904B72471F00E411008BA7AC /* tensor_style_utils.mm */; };
+		904B724F1F01033B008BA7AC /* fang.png in Resources */ = {isa = PBXBuildFile; fileRef = 904B724A1F01033B008BA7AC /* fang.png */; };
+		904B72501F01033B008BA7AC /* me.png in Resources */ = {isa = PBXBuildFile; fileRef = 904B724B1F01033B008BA7AC /* me.png */; };
+		904B72511F01033B008BA7AC /* monster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 904B724C1F01033B008BA7AC /* monster.jpg */; };
+		904B72521F01033B008BA7AC /* sample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 904B724D1F01033B008BA7AC /* sample.jpeg */; };
+		904B72531F01033B008BA7AC /* shinting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 904B724E1F01033B008BA7AC /* shinting.jpg */; };
 		90D04C5B1EF8ED8A00133EE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */; };
 		90D04C5E1EF8ED8A00133EE1 /* CameraViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C5D1EF8ED8A00133EE1 /* CameraViewController.mm */; };
 		90D04C611EF8ED8A00133EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D04C5F1EF8ED8A00133EE1 /* Main.storyboard */; };
@@ -37,7 +43,15 @@
 		904B72381F00A6A7008BA7AC /* StyleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StyleCollectionViewCell.xib; sourceTree = "<group>"; };
 		904B723B1F00AA23008BA7AC /* ios_image_load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ios_image_load.h; sourceTree = "<group>"; };
 		904B723C1F00AA23008BA7AC /* ios_image_load.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ios_image_load.mm; sourceTree = "<group>"; };
-		904B72411F00ABF1008BA7AC /* sample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpeg; sourceTree = "<group>"; };
+		904B72431F00D1D4008BA7AC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		904B72441F00D1D4008BA7AC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		904B72461F00E411008BA7AC /* tensor_style_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tensor_style_utils.h; sourceTree = "<group>"; };
+		904B72471F00E411008BA7AC /* tensor_style_utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tensor_style_utils.mm; sourceTree = "<group>"; };
+		904B724A1F01033B008BA7AC /* fang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fang.png; sourceTree = "<group>"; };
+		904B724B1F01033B008BA7AC /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me.png; sourceTree = "<group>"; };
+		904B724C1F01033B008BA7AC /* monster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = monster.jpg; sourceTree = "<group>"; };
+		904B724D1F01033B008BA7AC /* sample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpeg; sourceTree = "<group>"; };
+		904B724E1F01033B008BA7AC /* shinting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shinting.jpg; sourceTree = "<group>"; };
 		90D04C531EF8ED8A00133EE1 /* StyleCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D04C591EF8ED8A00133EE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,6 +100,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		904B72491F01033B008BA7AC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				904B724A1F01033B008BA7AC /* fang.png */,
+				904B724B1F01033B008BA7AC /* me.png */,
+				904B724C1F01033B008BA7AC /* monster.jpg */,
+				904B724D1F01033B008BA7AC /* sample.jpeg */,
+				904B724E1F01033B008BA7AC /* shinting.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		90D04C4A1EF8ED8A00133EE1 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +137,8 @@
 				90D04C701EF8EFED00133EE1 /* StyleCameraView */,
 				90D04C591EF8ED8A00133EE1 /* AppDelegate.h */,
 				90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */,
+				904B72431F00D1D4008BA7AC /* BaseViewController.h */,
+				904B72441F00D1D4008BA7AC /* BaseViewController.m */,
 				904B72331F009D90008BA7AC /* RootViewController.h */,
 				904B72341F009D90008BA7AC /* RootViewController.mm */,
 				90D04C5C1EF8ED8A00133EE1 /* CameraViewController.h */,
@@ -137,7 +165,7 @@
 		90D04C711EF8EFED00133EE1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				904B72411F00ABF1008BA7AC /* sample.jpeg */,
+				904B72491F01033B008BA7AC /* Images */,
 				90D04C721EF8EFED00133EE1 /* Assets.xcassets */,
 				90D04C731EF8EFED00133EE1 /* Info.plist */,
 				90D04C741EF8EFED00133EE1 /* main.m */,
@@ -156,6 +184,8 @@
 				90D04C7F1EF9182500133EE1 /* libprotobuf-lite.a */,
 				90D04C801EF9182500133EE1 /* libprotobuf.a */,
 				90D04C7D1EF917FE00133EE1 /* libtensorflow-core.a */,
+				904B72461F00E411008BA7AC /* tensor_style_utils.h */,
+				904B72471F00E411008BA7AC /* tensor_style_utils.mm */,
 			);
 			path = Tensorflow;
 			sourceTree = "<group>";
@@ -241,10 +271,14 @@
 			files = (
 				90D04C891EF91E7E00133EE1 /* stylize_quantized.pb in Resources */,
 				90D04C611EF8ED8A00133EE1 /* Main.storyboard in Resources */,
+				904B72521F01033B008BA7AC /* sample.jpeg in Resources */,
+				904B72511F01033B008BA7AC /* monster.jpg in Resources */,
 				90D04C751EF8EFED00133EE1 /* Assets.xcassets in Resources */,
 				904B723A1F00A6A7008BA7AC /* StyleCollectionViewCell.xib in Resources */,
 				90D04C6F1EF8EFDF00133EE1 /* LaunchScreen.storyboard in Resources */,
-				904B72421F00ABF1008BA7AC /* sample.jpeg in Resources */,
+				904B724F1F01033B008BA7AC /* fang.png in Resources */,
+				904B72501F01033B008BA7AC /* me.png in Resources */,
+				904B72531F01033B008BA7AC /* shinting.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +338,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				90D04C5E1EF8ED8A00133EE1 /* CameraViewController.mm in Sources */,
+				904B72451F00D1D4008BA7AC /* BaseViewController.m in Sources */,
 				90D04C7A1EF8F02D00133EE1 /* CCCStyleCameraView.m in Sources */,
 				904B72391F00A6A7008BA7AC /* StyleCollectionViewCell.m in Sources */,
+				904B72481F00E411008BA7AC /* tensor_style_utils.mm in Sources */,
 				904B72351F009D90008BA7AC /* RootViewController.mm in Sources */,
 				90D04C771EF8EFED00133EE1 /* main.m in Sources */,
 				904B723D1F00AA23008BA7AC /* ios_image_load.mm in Sources */,

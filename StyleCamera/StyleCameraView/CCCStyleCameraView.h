@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CCCCamera.h>
+#import <CoreImage/CoreImage.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -34,7 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)cccStyleCameraViewDidStop:(CCCStyleCameraView *)cameraView;
 
 - (CVImageBufferRef)cccStyleCameraView:(CCCStyleCameraView *)cameraView
-                        processPreview:(CVImageBufferRef)imageBuffer;
+              processPreviewWithBuffer:(CVImageBufferRef)imageBuffer;
+- (CIImage *)cccStyleCameraView:(CCCStyleCameraView *)cameraView
+      processPreviewWithCIImage:(CIImage *)previewImage;
 
 @end
 

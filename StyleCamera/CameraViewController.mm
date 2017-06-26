@@ -10,12 +10,17 @@
 #import "CCCStyleCameraView.h"
 
 
-@interface CameraViewController () <CCCStyleCameraViewDelegate>
+@interface CameraViewController () <CCCStyleCameraViewDelegate> {
+    NSTimeInterval _previousFrameTime;
+    CGFloat _fps;
+}
 
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *switchButton;
 
 @property (retain, nonatomic) IBOutlet CCCStyleCameraView *styleCameraView;
 @property (retain, nonatomic) IBOutlet UILabel *previewSizeLabel;
+
+@property (retain, nonatomic) NSTimer *fpsTimer;
 
 @end
 
@@ -25,11 +30,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    _previousFrameTime = 0;
+    
     self.styleCameraView.delegate = self;
     self.styleCameraView.videoQuality = CCCCameraVideoQualityPhoto;
     
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -37,9 +43,12 @@
 }
 
 - (void)dealloc {
+    [_fpsTimer invalidate];
+    
     [_styleCameraView release];
     [_switchButton release];
     [_previewSizeLabel release];
+    [_fpsTimer release];
     [super dealloc];
 }
 
@@ -53,7 +62,11 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    _previousFrameTime = 0;
+    _fps = 0;
     [self.styleCameraView startCameraRunning];
+    
+    self.fpsTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(displayFps:) userInfo:nil repeats:YES];
     
 }
 
@@ -61,6 +74,11 @@
     [super viewWillDisappear:animated];
     
     [self.styleCameraView stopCameraRunning];
+    
+    if (self.fpsTimer) {
+        [self.fpsTimer invalidate];
+    }
+    self.fpsTimer = nil;
     
 }
 
@@ -77,12 +95,25 @@
     self.previewSizeLabel.text = nil;
 }
 
+// 顯示FPS
+- (void)displayFps:(NSTimer *)theTimer {
+    if (_fps == 0) {
+        return;
+    }
+    
+    self.previewSizeLabel.text = [NSString stringWithFormat:@"%ldx%ld, %.1f fps", (long)self.styleCameraView.cameraSession.currentPreviewSize.width, (long)self.styleCameraView.cameraSession.currentPreviewSize.height, _fps];
+}
+
 #pragma mark - Button Actions
 
 - (IBAction)switchCamera:(id)sender {
     if ([CCCCameraView numberOfCameraDevice] <= 1) {
         return;
     }
+    
+    _previousFrameTime = 0;
+    _fps = 0;
+    self.previewSizeLabel.text = nil;
     
     switch (self.styleCameraView.cameraDevice) {
         case CCCCameraDeviceRear: {
@@ -95,25 +126,32 @@
         }
     }
     
-    self.previewSizeLabel.text = nil;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.previewSizeLabel.text = [NSString stringWithFormat:@"%ld x %ld", (long)self.styleCameraView.cameraSession.currentPreviewSize.width, (long)self.styleCameraView.cameraSession.currentPreviewSize.height];
-    });
-    
+}
+
+- (IBAction)closeAction:(id)sender {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - CCCStyleCameraViewDelegate
 
 - (void)cccStyleCameraViewDidStart:(CCCStyleCameraView *)cameraView {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.previewSizeLabel.text = [NSString stringWithFormat:@"%ld x %ld", (long)cameraView.cameraSession.currentPreviewSize.width, (long)cameraView.cameraSession.currentPreviewSize.height];
-    });
+    
 }
 
 - (CVImageBufferRef)cccStyleCameraView:(CCCStyleCameraView *)cameraView
-                        processPreview:(CVImageBufferRef)imageBuffer {
+                        processPreviewWithBuffer:(CVImageBufferRef)imageBuffer {
     
     //TODO: 合上tensorflow?
+    
+    // 計算FPS
+    if (_previousFrameTime == 0) {
+        _previousFrameTime = [NSDate date].timeIntervalSince1970;
+    }
+    else {
+        NSTimeInterval currentFrameTime = [NSDate date].timeIntervalSince1970;
+        _fps = 1/(currentFrameTime-_previousFrameTime);
+        _previousFrameTime = currentFrameTime;
+    }
     
     return imageBuffer;
 }

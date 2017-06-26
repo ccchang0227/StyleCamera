@@ -16,6 +16,8 @@
 #define TENSORFLOW_EXAMPLES_IOS_IOS_IMAGE_LOAD_H_
 
 #include <vector>
+#import <CoreImage/CoreImage.h>
+#import <ImageIO/ImageIO.h>
 
 #include "tensorflow/core/framework/types.h"
 
@@ -23,5 +25,10 @@ std::vector<tensorflow::uint8> LoadImageFromFile(const char* file_name,
                                                  int* out_width,
                                                  int* out_height,
                                                  int* out_channels);
+
+std::vector<tensorflow::uint8> LoadImageFromCGImage(CGImageRef image,
+                                                    int* out_width,
+                                                    int* out_height,
+                                                    int* out_channels);
 
 #endif  // TENSORFLOW_EXAMPLES_IOS_IOS_IMAGE_LOAD_H_

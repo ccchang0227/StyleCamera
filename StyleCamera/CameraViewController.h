@@ -6,9 +6,9 @@
 //  Copyright © 2017年 realtouchapp. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface CameraViewController : UIViewController
+@interface CameraViewController : BaseViewController
 
 
 @end

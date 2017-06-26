@@ -19,14 +19,12 @@
 #include <assert.h>
 #include <stdio.h>
 
-#import <CoreImage/CoreImage.h>
-#import <ImageIO/ImageIO.h>
-
 using tensorflow::uint8;
 
 std::vector<uint8> LoadImageFromFile(const char* file_name,
-				     int* out_width, int* out_height,
-				     int* out_channels) {
+                                     int* out_width,
+                                     int* out_height,
+                                     int* out_channels) {
   FILE* file_handle = fopen(file_name, "rb");
   fseek(file_handle, 0, SEEK_END);
   const size_t bytes_in_file = ftell(file_handle);
@@ -61,27 +59,40 @@ std::vector<uint8> LoadImageFromFile(const char* file_name,
     *out_channels = 0;
     return std::vector<uint8>();
   }
-
-  const int width = (int)CGImageGetWidth(image);
-  const int height = (int)CGImageGetHeight(image);
-  const int channels = 4;
-  CGColorSpaceRef color_space = CGColorSpaceCreateDeviceRGB();
-  const int bytes_per_row = (width * channels);
-  const int bytes_in_image = (bytes_per_row * height);
-  std::vector<uint8> result(bytes_in_image);
-  const int bits_per_component = 8;
-  CGContextRef context = CGBitmapContextCreate(result.data(), width, height,
-    bits_per_component, bytes_per_row, color_space,
-    kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
-  CGColorSpaceRelease(color_space);
-  CGContextDrawImage(context, CGRectMake(0, 0, width, height), image);
-  CGContextRelease(context);
+    
+  std::vector<uint8> result = LoadImageFromCGImage(image, out_width, out_height, out_channels);
   CFRelease(image);
   CFRelease(image_provider);
   CFRelease(file_data_ref);
-
-  *out_width = width;
-  *out_height = height;
-  *out_channels = channels;
+  
   return result;
+}
+
+std::vector<uint8> LoadImageFromCGImage(CGImageRef image,
+                                        int* out_width,
+                                        int* out_height,
+                                        int* out_channels) {
+    const int width = (int)CGImageGetWidth(image);
+    const int height = (int)CGImageGetHeight(image);
+    const int channels = 4;
+    CGColorSpaceRef color_space = CGColorSpaceCreateDeviceRGB();
+    const int bytes_per_row = (width * channels);
+    const int bytes_in_image = (bytes_per_row * height);
+    std::vector<uint8> result(bytes_in_image);
+    const int bits_per_component = 8;
+    CGContextRef context = CGBitmapContextCreate(result.data(),
+                                                 width,
+                                                 height,
+                                                 bits_per_component,
+                                                 bytes_per_row,
+                                                 color_space,
+                                                 kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+    CGColorSpaceRelease(color_space);
+    CGContextDrawImage(context, CGRectMake(0, 0, width, height), image);
+    CGContextRelease(context);
+    
+    *out_width = width;
+    *out_height = height;
+    *out_channels = channels;
+    return result;
 }

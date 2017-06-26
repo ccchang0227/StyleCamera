@@ -577,8 +577,8 @@
     
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
     */
-    if (_delegate && [_delegate respondsToSelector:@selector(cccStyleCameraView:processPreview:)]) {
-        imageBuffer = [_delegate cccStyleCameraView:self processPreview:imageBuffer];
+    if (_delegate && [_delegate respondsToSelector:@selector(cccStyleCameraView:processPreviewWithBuffer:)]) {
+        imageBuffer = [_delegate cccStyleCameraView:self processPreviewWithBuffer:imageBuffer];
     }
     
     CIImage *sourceImage = [CIImage imageWithCVPixelBuffer:(CVPixelBufferRef)imageBuffer options:nil];
@@ -593,6 +593,10 @@
     [filter setValue:sourceImage forKey:kCIInputImageKey];
     [filter setValue:[NSValue value:&transform withObjCType:@encode(CGAffineTransform)] forKey:@"inputTransform"];
     sourceImage = [filter.outputImage imageByCroppingToRect:CGRectMake(0, 0, imageSize.width, imageSize.height)];
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(cccStyleCameraView:processPreviewWithCIImage:)]) {
+        sourceImage = [_delegate cccStyleCameraView:self processPreviewWithCIImage:sourceImage];
+    }
     
     return sourceImage;
 }
