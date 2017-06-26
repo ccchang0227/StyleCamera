@@ -49,4 +49,6 @@ void GetTopN(const Eigen::TensorMap<Eigen::Tensor<float, 1, Eigen::RowMajor>,
              const int num_results, const float threshold,
              std::vector<std::pair<float, int> >* top_results);
 
+NSString* FilePathForResourceName(NSString* name, NSString* extension);
+
 #endif  // TENSORFLOW_CONTRIB_IOS_EXAMPLES_CAMERA_TENSORFLOW_UTILS_H_

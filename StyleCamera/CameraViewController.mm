@@ -1,16 +1,16 @@
 //
-//  ViewController.m
+//  CameraViewController.mm
 //  StyleCamera
 //
 //  Created by realtouchapp on 2017/6/20.
 //  Copyright © 2017年 realtouchapp. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CameraViewController.h"
 #import "CCCStyleCameraView.h"
 
 
-@interface ViewController () <CCCStyleCameraViewDelegate>
+@interface CameraViewController () <CCCStyleCameraViewDelegate>
 
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *switchButton;
 
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation ViewController
+@implementation CameraViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

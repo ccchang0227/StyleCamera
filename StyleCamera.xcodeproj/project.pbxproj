@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		904B72351F009D90008BA7AC /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 904B72341F009D90008BA7AC /* RootViewController.mm */; };
+		904B72391F00A6A7008BA7AC /* StyleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 904B72371F00A6A7008BA7AC /* StyleCollectionViewCell.m */; };
+		904B723A1F00A6A7008BA7AC /* StyleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904B72381F00A6A7008BA7AC /* StyleCollectionViewCell.xib */; };
+		904B723D1F00AA23008BA7AC /* ios_image_load.mm in Sources */ = {isa = PBXBuildFile; fileRef = 904B723C1F00AA23008BA7AC /* ios_image_load.mm */; };
+		904B72421F00ABF1008BA7AC /* sample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 904B72411F00ABF1008BA7AC /* sample.jpeg */; };
 		90D04C5B1EF8ED8A00133EE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */; };
-		90D04C5E1EF8ED8A00133EE1 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C5D1EF8ED8A00133EE1 /* ViewController.mm */; };
+		90D04C5E1EF8ED8A00133EE1 /* CameraViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C5D1EF8ED8A00133EE1 /* CameraViewController.mm */; };
 		90D04C611EF8ED8A00133EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D04C5F1EF8ED8A00133EE1 /* Main.storyboard */; };
 		90D04C6F1EF8EFDF00133EE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D04C6D1EF8EFDF00133EE1 /* LaunchScreen.storyboard */; };
 		90D04C751EF8EFED00133EE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D04C721EF8EFED00133EE1 /* Assets.xcassets */; };
@@ -25,11 +30,19 @@
 
 /* Begin PBXFileReference section */
 		2CFC4F8EF673434164902D8F /* Pods-StyleCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleCamera.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleCamera/Pods-StyleCamera.release.xcconfig"; sourceTree = "<group>"; };
+		904B72331F009D90008BA7AC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		904B72341F009D90008BA7AC /* RootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RootViewController.mm; sourceTree = "<group>"; };
+		904B72361F00A6A7008BA7AC /* StyleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleCollectionViewCell.h; sourceTree = "<group>"; };
+		904B72371F00A6A7008BA7AC /* StyleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleCollectionViewCell.m; sourceTree = "<group>"; };
+		904B72381F00A6A7008BA7AC /* StyleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StyleCollectionViewCell.xib; sourceTree = "<group>"; };
+		904B723B1F00AA23008BA7AC /* ios_image_load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ios_image_load.h; sourceTree = "<group>"; };
+		904B723C1F00AA23008BA7AC /* ios_image_load.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ios_image_load.mm; sourceTree = "<group>"; };
+		904B72411F00ABF1008BA7AC /* sample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpeg; sourceTree = "<group>"; };
 		90D04C531EF8ED8A00133EE1 /* StyleCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D04C591EF8ED8A00133EE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		90D04C5C1EF8ED8A00133EE1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		90D04C5D1EF8ED8A00133EE1 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		90D04C5C1EF8ED8A00133EE1 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		90D04C5D1EF8ED8A00133EE1 /* CameraViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CameraViewController.mm; sourceTree = "<group>"; };
 		90D04C601EF8ED8A00133EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90D04C6E1EF8EFDF00133EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90D04C721EF8EFED00133EE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,10 +111,15 @@
 				90D04C701EF8EFED00133EE1 /* StyleCameraView */,
 				90D04C591EF8ED8A00133EE1 /* AppDelegate.h */,
 				90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */,
-				90D04C5C1EF8ED8A00133EE1 /* ViewController.h */,
-				90D04C5D1EF8ED8A00133EE1 /* ViewController.mm */,
+				904B72331F009D90008BA7AC /* RootViewController.h */,
+				904B72341F009D90008BA7AC /* RootViewController.mm */,
+				90D04C5C1EF8ED8A00133EE1 /* CameraViewController.h */,
+				90D04C5D1EF8ED8A00133EE1 /* CameraViewController.mm */,
 				90D04C5F1EF8ED8A00133EE1 /* Main.storyboard */,
 				90D04C6D1EF8EFDF00133EE1 /* LaunchScreen.storyboard */,
+				904B72361F00A6A7008BA7AC /* StyleCollectionViewCell.h */,
+				904B72371F00A6A7008BA7AC /* StyleCollectionViewCell.m */,
+				904B72381F00A6A7008BA7AC /* StyleCollectionViewCell.xib */,
 				90D04C711EF8EFED00133EE1 /* Supporting Files */,
 			);
 			path = StyleCamera;
@@ -119,6 +137,7 @@
 		90D04C711EF8EFED00133EE1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				904B72411F00ABF1008BA7AC /* sample.jpeg */,
 				90D04C721EF8EFED00133EE1 /* Assets.xcassets */,
 				90D04C731EF8EFED00133EE1 /* Info.plist */,
 				90D04C741EF8EFED00133EE1 /* main.m */,
@@ -132,6 +151,8 @@
 				90D04C851EF91E7E00133EE1 /* Model */,
 				90D04C871EF91E7E00133EE1 /* tensorflow_utils.h */,
 				90D04C881EF91E7E00133EE1 /* tensorflow_utils.mm */,
+				904B723B1F00AA23008BA7AC /* ios_image_load.h */,
+				904B723C1F00AA23008BA7AC /* ios_image_load.mm */,
 				90D04C7F1EF9182500133EE1 /* libprotobuf-lite.a */,
 				90D04C801EF9182500133EE1 /* libprotobuf.a */,
 				90D04C7D1EF917FE00133EE1 /* libtensorflow-core.a */,
@@ -221,7 +242,9 @@
 				90D04C891EF91E7E00133EE1 /* stylize_quantized.pb in Resources */,
 				90D04C611EF8ED8A00133EE1 /* Main.storyboard in Resources */,
 				90D04C751EF8EFED00133EE1 /* Assets.xcassets in Resources */,
+				904B723A1F00A6A7008BA7AC /* StyleCollectionViewCell.xib in Resources */,
 				90D04C6F1EF8EFDF00133EE1 /* LaunchScreen.storyboard in Resources */,
+				904B72421F00ABF1008BA7AC /* sample.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,9 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90D04C5E1EF8ED8A00133EE1 /* ViewController.mm in Sources */,
+				90D04C5E1EF8ED8A00133EE1 /* CameraViewController.mm in Sources */,
 				90D04C7A1EF8F02D00133EE1 /* CCCStyleCameraView.m in Sources */,
+				904B72391F00A6A7008BA7AC /* StyleCollectionViewCell.m in Sources */,
+				904B72351F009D90008BA7AC /* RootViewController.mm in Sources */,
 				90D04C771EF8EFED00133EE1 /* main.m in Sources */,
+				904B723D1F00AA23008BA7AC /* ios_image_load.mm in Sources */,
 				90D04C8A1EF91E7E00133EE1 /* tensorflow_utils.mm in Sources */,
 				90D04C5B1EF8ED8A00133EE1 /* AppDelegate.m in Sources */,
 			);
