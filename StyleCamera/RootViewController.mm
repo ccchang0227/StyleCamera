@@ -10,17 +10,30 @@
 #import "StyleCollectionViewCell.h"
 
 #import "tensor_style_utils.h"
+#import "CCLPickerView.h"
 
-#define SAMPLE_IMAGE_NAME       @"monster"
-#define SAMPLE_IMAGE_EXTENSION  @"jpg"
+#define DEFAULT_SAMPLE_IMAGE_NAME       @"monster"
+#define DEFAULT_SAMPLE_IMAGE_EXTENSION  @"jpg"
 
-@interface RootViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+typedef NS_ENUM(NSInteger, ImageSource) {
+    ImageSourceAlbum = 0,
+    ImageSourceResource
+};
+
+@interface RootViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CCLPickerViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (retain, nonatomic) IBOutlet UIImageView *sampleImageView;
 @property (retain, nonatomic) IBOutlet UILabel *debugLabel;
 @property (retain, nonatomic) IBOutlet UICollectionView *stylesCollectionView;
 
 @property (retain, nonatomic) tensor_style_utils *tensorStyleUtils;
+
+@property (retain, nonatomic) CCLPickerView *cclPickerView;
+
+@property (nonatomic) ImageSource imageSource;
+@property (retain, nonatomic) NSString *resourceName;
+@property (retain, nonatomic) NSString *resourceType;
 
 @end
 
@@ -32,8 +45,11 @@
     
     _tensorStyleUtils = [[tensor_style_utils alloc] init];
     
-    self.sampleImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.%@", SAMPLE_IMAGE_NAME, SAMPLE_IMAGE_EXTENSION]];
-    self.debugLabel.text = nil;
+    self.imageSource = ImageSourceResource;
+    self.resourceName = DEFAULT_SAMPLE_IMAGE_NAME;
+    self.resourceType = DEFAULT_SAMPLE_IMAGE_EXTENSION;
+    [self setDefault];
+    
     [self.stylesCollectionView registerNib:[UINib nibWithNibName:@"StyleCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"StyleCollectionViewCell"];
     
 }
@@ -44,27 +60,73 @@
 }
 
 - (void)dealloc {
-    [_tensorStyleUtils release];
     [_sampleImageView release];
     [_stylesCollectionView release];
     [_debugLabel release];
+    [_tensorStyleUtils release];
+    [_cclPickerView release];
+    [_resourceName release];
+    [_resourceType release];
     [super dealloc];
+}
+
+#pragma mark -
+
+- (void)setDefault {
+    switch (self.imageSource) {
+        case ImageSourceAlbum: {
+            
+            break;
+        }
+        default: {
+            self.sampleImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.%@", self.resourceName, self.resourceType]];
+            break;
+        }
+    }
+    self.debugLabel.text = [NSString stringWithFormat:@"%ldx%ld\n", (long)self.sampleImageView.image.size.width, (long)self.sampleImageView.image.size.height];
 }
 
 - (void)runStyle {
     NSTimeInterval startTime = [NSDate date].timeIntervalSince1970;
     
-    ImageData imageData = [self.tensorStyleUtils performStyleTransferWithResourceName:SAMPLE_IMAGE_NAME
-                                                                                 type:SAMPLE_IMAGE_EXTENSION];
+    ImageData imageData;
+    switch (self.imageSource) {
+        case ImageSourceAlbum: {
+            
+            break;
+        }
+        default: {
+            imageData = [self.tensorStyleUtils performStyleTransferWithResourceName:self.resourceName
+                                                                               type:self.resourceType];
+            break;
+        }
+    }
     UIImage *outputImage = createImageFromImageData(imageData);
     self.sampleImageView.image = outputImage;
     
     NSTimeInterval costTime = [NSDate date].timeIntervalSince1970 - startTime;
-    self.debugLabel.text = [NSString stringWithFormat:@"Time cost: %.3f sec.", costTime];
+    self.debugLabel.text = [NSString stringWithFormat:@"%ldx%ld\nTime cost: %.3f sec.", (long)outputImage.size.width, (long)outputImage.size.height, costTime];
 //    [self showAlertWithTitle:[NSString stringWithFormat:@"cost: %.3f sec.", costTime] message:nil actions:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil], nil];
 //    NSLog(@"cost: %.3f sec.", costTime);
 //    LOG(INFO) << "Done";
     
+}
+
+#pragma mark -
+
+- (IBAction)openAlbumAction:(id)sender {
+    
+}
+
+- (IBAction)selectResourceAction:(UIButton *)sender {
+    CCLPickerView *pickerView = [[CCLPickerView alloc] initWithTitle:@"Select Resource"
+                                                            delegate:self
+                                                   cancelButtonTitle:@"Cancel"
+                                                     saveButtonTitle:@"OK"];
+    self.cclPickerView = pickerView;
+    [pickerView release];
+    
+    [self.cclPickerView showPickerViewFromView:sender];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -88,8 +150,7 @@
     
     if (indexPath.item == 0) {
         [self.tensorStyleUtils clearStyle];
-        self.sampleImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.%@", SAMPLE_IMAGE_NAME, SAMPLE_IMAGE_EXTENSION]];
-        self.debugLabel.text = nil;
+        [self setDefault];
     }
     else {
         [self.tensorStyleUtils selectStyle:(int)(indexPath.item-1)];
@@ -129,6 +190,60 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(5, 10, 5, 10);
+}
+
+#pragma mark - CCLPickerViewDelegate
+
+- (void)pickerViewDidSaveWithResult:(NSArray *)selectRowArray {
+    if (!selectRowArray || selectRowArray.count == 0) {
+        self.cclPickerView = nil;
+        return;
+    }
+    
+    self.imageSource = ImageSourceResource;
+    NSInteger row = [selectRowArray[0] integerValue];
+    NSArray<NSString *> *names = @[@"sample",
+                                   @"fang",
+                                   @"shinting",
+                                   @"me",
+                                   @"monster"];
+    NSArray<NSString *> *types = @[@"jpeg",
+                                   @"png",
+                                   @"jpg",
+                                   @"png",
+                                   @"jpg"];
+    self.resourceName = names[row];
+    self.resourceType = types[row];
+    
+    [self setDefault];
+    
+    self.cclPickerView = nil;
+}
+
+- (void)pickerViewDidCancel {
+    self.cclPickerView = nil;
+}
+
+#pragma mark - UIPickerViewDataSource
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return 5;
+}
+
+#pragma mark - UIPickerViewDelegate
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+    NSArray<NSString *> *titles = @[@"狗",
+                                    @"吉芳",
+                                    @"信廷",
+                                    @"智傑",
+                                    @"誘人的背影"];
+    return titles[row];
 }
 
 @end

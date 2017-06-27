@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ios_image_load.h"
+#import "tensorflow_utils.h"
+
 #include <fstream>
 #include <pthread.h>
 #include <unistd.h>
@@ -46,7 +49,6 @@ typedef struct {
     int height;
     ARGBPixel *pixelData;
 } ImageData;
-
 UIKIT_EXTERN ImageData EmptyImageData;
 
 UIKIT_EXTERN UIImage *createImageFromImageData(ImageData imageData);
@@ -61,6 +63,7 @@ UIKIT_EXTERN UIImage *createImageFromImageData(ImageData imageData);
 - (void)selectStyle:(int)index;
 - (void)clearStyle;
 
+- (ImageData)performStyleTransferWithCGImage:(CGImageRef)image;
 - (ImageData)performStyleTransferWithResourceName:(NSString *)resourceName
                                              type:(NSString *)extension;
 - (ImageData)performStyleTransferWithImagePath:(NSString *)imagePath;

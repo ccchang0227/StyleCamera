@@ -8,9 +8,6 @@
 
 #import "tensor_style_utils.h"
 
-#include "ios_image_load.h"
-#include "tensorflow_utils.h"
-
 #define STYLE_MODEL_NAME    @"stylize_quantized"
 #define STYLE_MODEL_TYPE    @"pb"
 
@@ -18,7 +15,7 @@
 #define STYLE_NODE          "style_num"
 #define OUTPUT_NODE         "transformer/expand/conv3/conv/Sigmoid"
 
-ImageData EmptyImageData = {NULL, 0, 0};
+ImageData EmptyImageData = {0, 0, NULL};
 
 UIImage *createImageFromImageData(ImageData imageData) {
     if (NULL == imageData.pixelData) {
@@ -90,6 +87,25 @@ UIImage *createImageFromImageData(ImageData imageData) {
     }
 }
 
+- (ImageData)performStyleTransferWithCGImage:(CGImageRef)image {
+    if (NULL == image) {
+        return EmptyImageData;
+    }
+    
+    int image_width;
+    int image_height;
+    int image_channels;
+    std::vector<tensorflow::uint8> image_data = LoadImageFromCGImage(image,
+                                                                     &image_width,
+                                                                     &image_height,
+                                                                     &image_channels);
+    
+    return [self _performStyleTransferWithImageData:image_data
+                                         imageWidth:image_width
+                                        imageHeight:image_height
+                                      imageChannels:image_channels];    
+}
+
 - (ImageData)performStyleTransferWithResourceName:(NSString *)resourceName type:(NSString *)extension {
     if (!resourceName || resourceName.length == 0) {
         return EmptyImageData;
@@ -114,19 +130,37 @@ UIImage *createImageFromImageData(ImageData imageData) {
                                                                   &image_width,
                                                                   &image_height,
                                                                   &image_channels);
-    int wanted_width = image_width;//256;
+    
+    return [self _performStyleTransferWithImageData:image_data
+                                         imageWidth:image_width
+                                        imageHeight:image_height
+                                      imageChannels:image_channels];
+}
+
+- (ImageData)_performStyleTransferWithImageData:(std::vector<tensorflow::uint8>)image_data
+                                     imageWidth:(int)imageWidth
+                                    imageHeight:(int)imageHeight
+                                  imageChannels:(int)imageChannels {
+    if (image_data.empty()) {
+        return EmptyImageData;
+    }
+    
+    // width 和 height 必須要是4的倍數.
+    int wanted_width = imageWidth;//256;
     while (wanted_width%4 != 0) {
         wanted_width ++;
     }
-    int wanted_height = image_height;//256;
+    int wanted_height = imageHeight;//256;
     while (wanted_height%4 != 0) {
         wanted_height ++;
     }
-    // width 和 height 必須要是4的倍數.
     const int wanted_channels = 3;
     const float input_mean = 0.0f;//117.0f;
     const float input_std = 255.0f;//1.0f;
-    assert(image_channels >= wanted_channels);
+    if (imageChannels < wanted_channels) {
+        return EmptyImageData;
+    }
+    
     tensorflow::Tensor image_tensor(tensorflow::DT_FLOAT,
                                     tensorflow::TensorShape({1, wanted_height, wanted_width, wanted_channels}));
     auto image_tensor_mapped = image_tensor.tensor<float, 4>();
@@ -135,12 +169,12 @@ UIImage *createImageFromImageData(ImageData imageData) {
     float* out_temp = image_tensor_mapped.data();
     
     for (int y = 0; y < wanted_height; ++y) {
-        const int in_y = (y * image_height) / wanted_height;
-        tensorflow::uint8* in_row = in_temp + (in_y * image_width * image_channels);
+        const int in_y = (y * imageHeight) / wanted_height;
+        tensorflow::uint8* in_row = in_temp + (in_y * imageWidth * imageChannels);
         float* out_row = out_temp + (y * wanted_width * wanted_channels);
         for (int x = 0; x < wanted_width; ++x) {
-            const int in_x = (x * image_width) / wanted_width;
-            tensorflow::uint8* in_pixel = in_row + (in_x * image_channels);
+            const int in_x = (x * imageWidth) / wanted_width;
+            tensorflow::uint8* in_pixel = in_row + (in_x * imageChannels);
             float* out_pixel = out_row + (x * wanted_channels);
             for (int c = 0; c < wanted_channels; ++c) {
                 out_pixel[c] = (in_pixel[c] - input_mean) / input_std;
@@ -148,7 +182,7 @@ UIImage *createImageFromImageData(ImageData imageData) {
         }
     }
     
-    std::vector<tensorflow::Tensor> outputs = [self _performStyleTransfer:image_tensor];
+    std::vector<tensorflow::Tensor> outputs = [self _performStyleTransferWithTensor:image_tensor];
     if (outputs.empty()) {
         return EmptyImageData;
     }
@@ -160,15 +194,15 @@ UIImage *createImageFromImageData(ImageData imageData) {
 //    ARGBPixel *bitmapData = (ARGBPixel *)calloc((wanted_width*wanted_height), sizeof(ARGBPixel));
     for (int i = 0; i < (wanted_width*wanted_height); i ++) {
         bitmapData[i].alpha = 255;
-        bitmapData[i].red = ((int) (floatValues((i * 3)) * 255));
-        bitmapData[i].green = ((int) (floatValues((i * 3 + 1)) * 255));
-        bitmapData[i].blue = ((int) (floatValues((i * 3 + 2)) * 255));
+        bitmapData[i].red = ((UInt8) (floatValues((i * 3)) * 255));
+        bitmapData[i].green = ((UInt8) (floatValues((i * 3 + 1)) * 255));
+        bitmapData[i].blue = ((UInt8) (floatValues((i * 3 + 2)) * 255));
     }
     
     return {wanted_width, wanted_height, bitmapData};
 }
 
-- (std::vector<tensorflow::Tensor>)_performStyleTransfer:(tensorflow::Tensor)image_tensor {
+- (std::vector<tensorflow::Tensor>)_performStyleTransferWithTensor:(tensorflow::Tensor)image_tensor {
     std::vector<tensorflow::Tensor> outputs;
     if (!tf_session.get()) {
         return outputs;

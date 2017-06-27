@@ -18,6 +18,12 @@
 		904B72511F01033B008BA7AC /* monster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 904B724C1F01033B008BA7AC /* monster.jpg */; };
 		904B72521F01033B008BA7AC /* sample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 904B724D1F01033B008BA7AC /* sample.jpeg */; };
 		904B72531F01033B008BA7AC /* shinting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 904B724E1F01033B008BA7AC /* shinting.jpg */; };
+		90A2066C1F01FF0E00F3A97B /* CCLDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A2065F1F01FF0E00F3A97B /* CCLDatePicker.m */; };
+		90A2066D1F01FF0E00F3A97B /* CCLDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A206621F01FF0E00F3A97B /* CCLDatePickerViewController.m */; };
+		90A2066E1F01FF0E00F3A97B /* CCLDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A206631F01FF0E00F3A97B /* CCLDatePickerViewController.xib */; };
+		90A2066F1F01FF0E00F3A97B /* CCLPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A206661F01FF0E00F3A97B /* CCLPickerView.m */; };
+		90A206701F01FF0E00F3A97B /* CCLPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A206691F01FF0E00F3A97B /* CCLPickerViewController.m */; };
+		90A206711F01FF0E00F3A97B /* CCLPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A2066A1F01FF0E00F3A97B /* CCLPickerViewController.xib */; };
 		90D04C5B1EF8ED8A00133EE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */; };
 		90D04C5E1EF8ED8A00133EE1 /* CameraViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90D04C5D1EF8ED8A00133EE1 /* CameraViewController.mm */; };
 		90D04C611EF8ED8A00133EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D04C5F1EF8ED8A00133EE1 /* Main.storyboard */; };
@@ -52,6 +58,16 @@
 		904B724C1F01033B008BA7AC /* monster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = monster.jpg; sourceTree = "<group>"; };
 		904B724D1F01033B008BA7AC /* sample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpeg; sourceTree = "<group>"; };
 		904B724E1F01033B008BA7AC /* shinting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shinting.jpg; sourceTree = "<group>"; };
+		90A2065E1F01FF0E00F3A97B /* CCLDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLDatePicker.h; sourceTree = "<group>"; };
+		90A2065F1F01FF0E00F3A97B /* CCLDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLDatePicker.m; sourceTree = "<group>"; };
+		90A206611F01FF0E00F3A97B /* CCLDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLDatePickerViewController.h; sourceTree = "<group>"; };
+		90A206621F01FF0E00F3A97B /* CCLDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLDatePickerViewController.m; sourceTree = "<group>"; };
+		90A206631F01FF0E00F3A97B /* CCLDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCLDatePickerViewController.xib; sourceTree = "<group>"; };
+		90A206651F01FF0E00F3A97B /* CCLPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLPickerView.h; sourceTree = "<group>"; };
+		90A206661F01FF0E00F3A97B /* CCLPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLPickerView.m; sourceTree = "<group>"; };
+		90A206681F01FF0E00F3A97B /* CCLPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLPickerViewController.h; sourceTree = "<group>"; };
+		90A206691F01FF0E00F3A97B /* CCLPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLPickerViewController.m; sourceTree = "<group>"; };
+		90A2066A1F01FF0E00F3A97B /* CCLPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCLPickerViewController.xib; sourceTree = "<group>"; };
 		90D04C531EF8ED8A00133EE1 /* StyleCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D04C591EF8ED8A00133EE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90D04C5A1EF8ED8A00133EE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +128,63 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		90A2065B1F01FF0E00F3A97B /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				90A2065C1F01FF0E00F3A97B /* CCLPicker */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		90A2065C1F01FF0E00F3A97B /* CCLPicker */ = {
+			isa = PBXGroup;
+			children = (
+				90A2065D1F01FF0E00F3A97B /* CCLDatePicker */,
+				90A206641F01FF0E00F3A97B /* CCLPickerView */,
+			);
+			path = CCLPicker;
+			sourceTree = "<group>";
+		};
+		90A2065D1F01FF0E00F3A97B /* CCLDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				90A2065E1F01FF0E00F3A97B /* CCLDatePicker.h */,
+				90A2065F1F01FF0E00F3A97B /* CCLDatePicker.m */,
+				90A206601F01FF0E00F3A97B /* CCLDatePickerViewController */,
+			);
+			path = CCLDatePicker;
+			sourceTree = "<group>";
+		};
+		90A206601F01FF0E00F3A97B /* CCLDatePickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90A206611F01FF0E00F3A97B /* CCLDatePickerViewController.h */,
+				90A206621F01FF0E00F3A97B /* CCLDatePickerViewController.m */,
+				90A206631F01FF0E00F3A97B /* CCLDatePickerViewController.xib */,
+			);
+			path = CCLDatePickerViewController;
+			sourceTree = "<group>";
+		};
+		90A206641F01FF0E00F3A97B /* CCLPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				90A206651F01FF0E00F3A97B /* CCLPickerView.h */,
+				90A206661F01FF0E00F3A97B /* CCLPickerView.m */,
+				90A206671F01FF0E00F3A97B /* CCLPickerViewController */,
+			);
+			path = CCLPickerView;
+			sourceTree = "<group>";
+		};
+		90A206671F01FF0E00F3A97B /* CCLPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90A206681F01FF0E00F3A97B /* CCLPickerViewController.h */,
+				90A206691F01FF0E00F3A97B /* CCLPickerViewController.m */,
+				90A2066A1F01FF0E00F3A97B /* CCLPickerViewController.xib */,
+			);
+			path = CCLPickerViewController;
+			sourceTree = "<group>";
+		};
 		90D04C4A1EF8ED8A00133EE1 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +206,7 @@
 		90D04C551EF8ED8A00133EE1 /* StyleCamera */ = {
 			isa = PBXGroup;
 			children = (
+				90A2065B1F01FF0E00F3A97B /* SDK */,
 				90D04C7C1EF917EA00133EE1 /* Tensorflow */,
 				90D04C701EF8EFED00133EE1 /* StyleCameraView */,
 				90D04C591EF8ED8A00133EE1 /* AppDelegate.h */,
@@ -276,8 +350,10 @@
 				90D04C751EF8EFED00133EE1 /* Assets.xcassets in Resources */,
 				904B723A1F00A6A7008BA7AC /* StyleCollectionViewCell.xib in Resources */,
 				90D04C6F1EF8EFDF00133EE1 /* LaunchScreen.storyboard in Resources */,
+				90A206711F01FF0E00F3A97B /* CCLPickerViewController.xib in Resources */,
 				904B724F1F01033B008BA7AC /* fang.png in Resources */,
 				904B72501F01033B008BA7AC /* me.png in Resources */,
+				90A2066E1F01FF0E00F3A97B /* CCLDatePickerViewController.xib in Resources */,
 				904B72531F01033B008BA7AC /* shinting.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,13 +416,17 @@
 				90D04C5E1EF8ED8A00133EE1 /* CameraViewController.mm in Sources */,
 				904B72451F00D1D4008BA7AC /* BaseViewController.m in Sources */,
 				90D04C7A1EF8F02D00133EE1 /* CCCStyleCameraView.m in Sources */,
+				90A206701F01FF0E00F3A97B /* CCLPickerViewController.m in Sources */,
 				904B72391F00A6A7008BA7AC /* StyleCollectionViewCell.m in Sources */,
 				904B72481F00E411008BA7AC /* tensor_style_utils.mm in Sources */,
+				90A2066D1F01FF0E00F3A97B /* CCLDatePickerViewController.m in Sources */,
 				904B72351F009D90008BA7AC /* RootViewController.mm in Sources */,
 				90D04C771EF8EFED00133EE1 /* main.m in Sources */,
 				904B723D1F00AA23008BA7AC /* ios_image_load.mm in Sources */,
 				90D04C8A1EF91E7E00133EE1 /* tensorflow_utils.mm in Sources */,
+				90A2066F1F01FF0E00F3A97B /* CCLPickerView.m in Sources */,
 				90D04C5B1EF8ED8A00133EE1 /* AppDelegate.m in Sources */,
+				90A2066C1F01FF0E00F3A97B /* CCLDatePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
