@@ -114,10 +114,15 @@ UIImage *createImageFromImageData(ImageData imageData) {
                                                                   &image_width,
                                                                   &image_height,
                                                                   &image_channels);
-    const int wanted_width = image_width;//256;
-    const int wanted_height = image_height;//256;
-//    const int wanted_width = 256;
-//    const int wanted_height = 256;
+    int wanted_width = image_width;//256;
+    while (wanted_width%4 != 0) {
+        wanted_width ++;
+    }
+    int wanted_height = image_height;//256;
+    while (wanted_height%4 != 0) {
+        wanted_height ++;
+    }
+    // width 和 height 必須要是4的倍數.
     const int wanted_channels = 3;
     const float input_mean = 0.0f;//117.0f;
     const float input_std = 255.0f;//1.0f;
@@ -128,6 +133,7 @@ UIImage *createImageFromImageData(ImageData imageData) {
     tensorflow::uint8* in_temp = image_data.data();
 //    tensorflow::uint8* in_end = (in_temp + (image_height * image_width * image_channels));
     float* out_temp = image_tensor_mapped.data();
+    
     for (int y = 0; y < wanted_height; ++y) {
         const int in_y = (y * image_height) / wanted_height;
         tensorflow::uint8* in_row = in_temp + (in_y * image_width * image_channels);

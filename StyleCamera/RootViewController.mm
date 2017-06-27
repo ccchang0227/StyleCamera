@@ -11,10 +11,8 @@
 
 #import "tensor_style_utils.h"
 
-#define SAMPLE_IMAGE_NAME       @"shinting"
+#define SAMPLE_IMAGE_NAME       @"monster"
 #define SAMPLE_IMAGE_EXTENSION  @"jpg"
-
-// FIXME: 只有shinting和sample兩張圖正常...
 
 @interface RootViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
