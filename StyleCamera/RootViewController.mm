@@ -30,6 +30,7 @@ typedef NS_ENUM(NSInteger, ImageSource) {
 @property (retain, nonatomic) tensor_style_utils *tensorStyleUtils;
 
 @property (retain, nonatomic) CCLPickerView *cclPickerView;
+//@property (retain, nonatomic) UIImagePickerController
 
 @property (nonatomic) ImageSource imageSource;
 @property (retain, nonatomic) NSString *resourceName;
