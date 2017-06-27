@@ -9,5 +9,6 @@ target 'StyleCamera' do
 
   # Pods for StyleCamera
   pod 'CCCUIKit/CCCCamera', :path => '~/Desktop/iOS/Pods/CCCUIKit'
-
+  pod 'MBProgressHUD', '~> 1.0.0'
+  
 end

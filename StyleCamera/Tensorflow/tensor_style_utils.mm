@@ -15,9 +15,21 @@
 #define STYLE_NODE          "style_num"
 #define OUTPUT_NODE         "transformer/expand/conv3/conv/Sigmoid"
 
-ImageData EmptyImageData = {0, 0, NULL};
+ImageData *EmptyImageData = nil;
 
-UIImage *createImageFromImageData(ImageData imageData) {
+@implementation ImageData
+- (void)dealloc {
+    if (NULL != _pixelData) {
+        free( _pixelData );
+    }
+    [super dealloc];
+}
+@end
+
+UIImage *createImageFromImageData(ImageData *imageData, CGFloat scale, UIImageOrientation orientation) {
+    if (!imageData) {
+        return nil;
+    }
     if (NULL == imageData.pixelData) {
         return nil;
     }
@@ -33,7 +45,7 @@ UIImage *createImageFromImageData(ImageData imageData) {
                                                   kCGImageAlphaPremultipliedFirst);
     
     CGImageRef cgImage = CGBitmapContextCreateImage(context);
-    UIImage *outputImage = [UIImage imageWithCGImage:cgImage];
+    UIImage *outputImage = [UIImage imageWithCGImage:cgImage scale:scale orientation:orientation];
     
     CGColorSpaceRelease( colorSpace );
     CGContextRelease( context );
@@ -87,7 +99,7 @@ UIImage *createImageFromImageData(ImageData imageData) {
     }
 }
 
-- (ImageData)performStyleTransferWithCGImage:(CGImageRef)image {
+- (ImageData *)performStyleTransferWithCGImage:(CGImageRef)image {
     if (NULL == image) {
         return EmptyImageData;
     }
@@ -106,7 +118,7 @@ UIImage *createImageFromImageData(ImageData imageData) {
                                       imageChannels:image_channels];    
 }
 
-- (ImageData)performStyleTransferWithResourceName:(NSString *)resourceName type:(NSString *)extension {
+- (ImageData *)performStyleTransferWithResourceName:(NSString *)resourceName type:(NSString *)extension {
     if (!resourceName || resourceName.length == 0) {
         return EmptyImageData;
     }
@@ -118,7 +130,7 @@ UIImage *createImageFromImageData(ImageData imageData) {
     return [self performStyleTransferWithImagePath:image_path];
 }
 
-- (ImageData)performStyleTransferWithImagePath:(NSString *)imagePath {
+- (ImageData *)performStyleTransferWithImagePath:(NSString *)imagePath {
     if (!imagePath || imagePath.length == 0) {
         return EmptyImageData;
     }
@@ -137,7 +149,7 @@ UIImage *createImageFromImageData(ImageData imageData) {
                                       imageChannels:image_channels];
 }
 
-- (ImageData)_performStyleTransferWithImageData:(std::vector<tensorflow::uint8>)image_data
+- (ImageData *)_performStyleTransferWithImageData:(std::vector<tensorflow::uint8>)image_data
                                      imageWidth:(int)imageWidth
                                     imageHeight:(int)imageHeight
                                   imageChannels:(int)imageChannels {
@@ -190,8 +202,8 @@ UIImage *createImageFromImageData(ImageData imageData) {
     tensorflow::Tensor* output = &outputs[0];
     auto floatValues = output->flat<float>();
     
-    ARGBPixel bitmapData[(wanted_width*wanted_height)];
-//    ARGBPixel *bitmapData = (ARGBPixel *)calloc((wanted_width*wanted_height), sizeof(ARGBPixel));
+//    ARGBPixel bitmapData[(wanted_width*wanted_height)];
+    ARGBPixel *bitmapData = (ARGBPixel *)calloc((wanted_width*wanted_height), sizeof(ARGBPixel));
     for (int i = 0; i < (wanted_width*wanted_height); i ++) {
         bitmapData[i].alpha = 255;
         bitmapData[i].red = ((UInt8) (floatValues((i * 3)) * 255));
@@ -199,7 +211,12 @@ UIImage *createImageFromImageData(ImageData imageData) {
         bitmapData[i].blue = ((UInt8) (floatValues((i * 3 + 2)) * 255));
     }
     
-    return {wanted_width, wanted_height, bitmapData};
+    ImageData *imageData = [[ImageData alloc] init];
+    imageData.width = wanted_width;
+    imageData.height = wanted_height;
+    imageData.pixelData = bitmapData;
+    
+    return [imageData autorelease];
 }
 
 - (std::vector<tensorflow::Tensor>)_performStyleTransferWithTensor:(tensorflow::Tensor)image_tensor {

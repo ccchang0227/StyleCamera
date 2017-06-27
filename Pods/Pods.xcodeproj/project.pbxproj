@@ -12,23 +12,36 @@
 		27F58C1777A8122D23EEABDFF07B8C8B /* UIImage+CCCProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 25173151850A41B2FE89C4694CBA5D27 /* UIImage+CCCProcessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		434A2E1B724D914DFF3B25E3F3256922 /* CCCCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1873724377E06D70A46CC8F6162F6D /* CCCCameraView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		44053DE53518AD87D8A9560B26296B45 /* CCCCameraSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 168DEFFD8041EBFC78FDB416BFFE8600 /* CCCCameraSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49DF19738E4A78C0A599615EC7E0286A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEB5F81C9B5C6956EE97AFBD427871B /* Foundation.framework */; };
 		4E369C0DE3912515E02BA9DFE173B0CB /* CCCUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6546CE287B22096A25FBE48A77BA7925 /* CCCUIKit-dummy.m */; };
-		547C596FA259A48F8BE7338D6F0BA027 /* Pods-StyleCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD229F90A9B05ED03EE3A100257009E1 /* Pods-StyleCamera-dummy.m */; };
-		594E571BB9C45B1BFDA2CE3F5AD6D9BD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9B379BB3A8CDCEEECFC94B7B3C557F /* AVFoundation.framework */; };
-		5DEE25DFEAAB799F5C145A16E2F44672 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AB9036850BC4AE326AFD312B09B74D /* Foundation.framework */; };
-		726EA5C8BABECF2237148BCB623A24E7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA23112B152E0100CE83C07A5C037863 /* MobileCoreServices.framework */; };
+		536F7D0550F5FD9F5869CEC995CFEE9B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 30858F8F84BD7A73D99478028C4C0E9A /* MBProgressHUD.m */; };
+		594E571BB9C45B1BFDA2CE3F5AD6D9BD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EFE3D18258320FA85742CCA4D2E089 /* AVFoundation.framework */; };
+		726EA5C8BABECF2237148BCB623A24E7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F593F50CA910A161F51F50FE1DFE02B7 /* MobileCoreServices.framework */; };
+		8C9B1DC3568E2881FF159096A119F748 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E02D36019D0E2343AF2793D481418EDA /* CoreGraphics.framework */; };
 		93A0BC8A3E50A5DBF9D4A159FE3B773D /* CCCCameraConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = B9C72858EFB07A5570E6675CD8FB50D4 /* CCCCameraConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A752C7C7474AE3ABB0634B4F6D1890A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AB9036850BC4AE326AFD312B09B74D /* Foundation.framework */; };
+		A752C7C7474AE3ABB0634B4F6D1890A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEB5F81C9B5C6956EE97AFBD427871B /* Foundation.framework */; };
 		CA3798D44C55F5DC8123B4E36AFD14CB /* CCCCameraView.h in Headers */ = {isa = PBXBuildFile; fileRef = E06321D3418835DF9EDE5B44B770F415 /* CCCCameraView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CBA3B8676CD21E6243EA4D70D3D63FD2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514B8433FE760E60ABD7F576C04A3D60 /* CoreImage.framework */; };
+		CA5E682B018BF5756152E04FE2F23909 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEB5F81C9B5C6956EE97AFBD427871B /* Foundation.framework */; };
+		CBA3B8676CD21E6243EA4D70D3D63FD2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C09F6BB3C3B07AA600AAA455FB1DDB6 /* CoreImage.framework */; };
 		D094EFD566E207E3CB7DDB0147AC28B5 /* CCCCameraSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E79B090A0CB6FFDDD0A5C2F19ECF46AF /* CCCCameraSession.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E1B7AA152744583F41088674BA09B8BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5786D9C7CF3138E583FCF0227E121870 /* UIKit.framework */; };
-		E7F33DB8317D799AAADA0DAC888B1538 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BFE39600C119244699BA73740C9F9E /* CoreMotion.framework */; };
-		FE074E657B0727A77D30256D6A314B05 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87943CB17C29C4F65980A3B669E8074C /* ImageIO.framework */; };
+		D415D0767A8AF457434FFFB5957D4616 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA630595D81FD008A28F51BE2B6DD605 /* QuartzCore.framework */; };
+		E1B7AA152744583F41088674BA09B8BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA91F342A34ACE5FB3F21C1414C726E2 /* UIKit.framework */; };
+		E5229F5125ACD420659E7B2D19BB30A8 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9895137673E5059F732A42A1E2A66E0B /* MBProgressHUD-dummy.m */; };
+		E7F33DB8317D799AAADA0DAC888B1538 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22281869D3BC97921C06B981212D3CCC /* CoreMotion.framework */; };
+		EA321C98029015AA4895C0B26891D8F8 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E67CBBACD85CE50C19C6320AAD17088 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD51D483B28594785B68C2112B080720 /* Pods-StyleCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD229F90A9B05ED03EE3A100257009E1 /* Pods-StyleCamera-dummy.m */; };
+		FE074E657B0727A77D30256D6A314B05 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED8521183C107A9ABF28A44FFD2F5F5 /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EDAD682D3856CBA9685A30034EEBB5B8 /* PBXContainerItemProxy */ = {
+		936B1BC132EF306036D3E9F02CE92F92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 586F2DFA9BDCC6675C2546793A69E5CC;
+			remoteInfo = MBProgressHUD;
+		};
+		EE0A50115B1C1455974CE4576A665B60 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -38,46 +51,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01AB9036850BC4AE326AFD312B09B74D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		0AC9F439184EA8AF0E2D304F99AFB907 /* Pods-StyleCamera-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StyleCamera-acknowledgements.markdown"; sourceTree = "<group>"; };
 		168DEFFD8041EBFC78FDB416BFFE8600 /* CCCCameraSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CCCCameraSession.h; sourceTree = "<group>"; };
-		1E9B379BB3A8CDCEEECFC94B7B3C557F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		1C09F6BB3C3B07AA600AAA455FB1DDB6 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
+		1E67CBBACD85CE50C19C6320AAD17088 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		22281869D3BC97921C06B981212D3CCC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		24C6CA2FFB74417983C77CE0A8CF820E /* CCCCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CCCCamera.h; sourceTree = "<group>"; };
 		25173151850A41B2FE89C4694CBA5D27 /* UIImage+CCCProcessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+CCCProcessor.h"; sourceTree = "<group>"; };
-		499D793CB0FFA6C9286517BF9F31B631 /* libPods-StyleCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-StyleCamera.a"; path = "libPods-StyleCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		514B8433FE760E60ABD7F576C04A3D60 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
-		5786D9C7CF3138E583FCF0227E121870 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		30858F8F84BD7A73D99478028C4C0E9A /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		5D4CAA94D6EDF4C8EDA0C40B88E616C8 /* Pods-StyleCamera-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StyleCamera-frameworks.sh"; sourceTree = "<group>"; };
 		6546CE287B22096A25FBE48A77BA7925 /* CCCUIKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CCCUIKit-dummy.m"; sourceTree = "<group>"; };
-		72596813E3595BC5C9A8938CE4921BCD /* libCCCUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCCCUIKit.a; path = libCCCUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		803861154DAE26A5093F0D544D1FEC0E /* Pods-StyleCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StyleCamera.release.xcconfig"; sourceTree = "<group>"; };
-		87943CB17C29C4F65980A3B669E8074C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		80DB6C08B9B312D2B623E23F6515C0A5 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
 		92A2327719F9D4A3B5FBEDB41DBFA476 /* CCCUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCCUIKit-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9425C2CE1569C3FF262A0BA215A5AE98 /* CCCCamera_Light.png */ = {isa = PBXFileReference; includeInIndex = 1; path = CCCCamera_Light.png; sourceTree = "<group>"; };
-		95BFE39600C119244699BA73740C9F9E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		977894121203224FB1E01E1627662547 /* Pods-StyleCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StyleCamera.debug.xcconfig"; sourceTree = "<group>"; };
+		9895137673E5059F732A42A1E2A66E0B /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		98C3F534D7A9AE4F23FD85232098F3B6 /* Pods-StyleCamera-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StyleCamera-resources.sh"; sourceTree = "<group>"; };
+		AA630595D81FD008A28F51BE2B6DD605 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		AABE45081325970398177350B3365B5A /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		AC03C919D1BAFE1EE122A5C575741FBF /* CCCUIKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCCUIKit.xcconfig; sourceTree = "<group>"; };
 		B9C72858EFB07A5570E6675CD8FB50D4 /* CCCCameraConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CCCCameraConstants.h; sourceTree = "<group>"; };
-		CA23112B152E0100CE83C07A5C037863 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		C1197AFDD59FAFC081894EE7D025C021 /* libCCCUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCCCUIKit.a; path = libCCCUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA91F342A34ACE5FB3F21C1414C726E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		DD229F90A9B05ED03EE3A100257009E1 /* Pods-StyleCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StyleCamera-dummy.m"; sourceTree = "<group>"; };
+		E02D36019D0E2343AF2793D481418EDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		E06321D3418835DF9EDE5B44B770F415 /* CCCCameraView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CCCCameraView.h; sourceTree = "<group>"; };
 		E214BBD473D00428A6984599601AE557 /* Pods-StyleCamera-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StyleCamera-acknowledgements.plist"; sourceTree = "<group>"; };
+		E38D457A4C01340D357008EE0F55B316 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79B090A0CB6FFDDD0A5C2F19ECF46AF /* CCCCameraSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CCCCameraSession.m; sourceTree = "<group>"; };
+		EED8521183C107A9ABF28A44FFD2F5F5 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		EEEB5F81C9B5C6956EE97AFBD427871B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F1DB37081092B30F047F220BE62CF706 /* libPods-StyleCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-StyleCamera.a"; path = "libPods-StyleCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4EFE3D18258320FA85742CCA4D2E089 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		F593F50CA910A161F51F50FE1DFE02B7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		F9DE5575A7952DFACA3EB9FF30D0D29D /* UIImage+CCCProcessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CCCProcessor.m"; sourceTree = "<group>"; };
 		FD1873724377E06D70A46CC8F6162F6D /* CCCCameraView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CCCCameraView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		06B6A1DF5EF184BBED2A65A98BB65AA1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5DEE25DFEAAB799F5C145A16E2F44672 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		31257C6DDAF3A7A39DE4C2F3FDFF685D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,9 +105,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5EB96BC80F1770362DA86A02A72D12C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49DF19738E4A78C0A599615EC7E0286A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9AC974E3329F79899A7B3BE290FC894 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C9B1DC3568E2881FF159096A119F748 /* CoreGraphics.framework in Frameworks */,
+				CA5E682B018BF5756152E04FE2F23909 /* Foundation.framework in Frameworks */,
+				D415D0767A8AF457434FFFB5957D4616 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		077EB30DB6AD0F301EC92B8EAEA22722 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				1E67CBBACD85CE50C19C6320AAD17088 /* MBProgressHUD.h */,
+				30858F8F84BD7A73D99478028C4C0E9A /* MBProgressHUD.m */,
+				2848C0E8056CB6EE547CD6E0C1780766 /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		24002A6670E6882ECD6250D3E60F9CB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6C5BB519DA1FCE1BD853AF5B0BCCE02 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		27F66E96F902AF3E8CC345D5D77910B2 /* Pods-StyleCamera */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +158,17 @@
 			);
 			name = "Pods-StyleCamera";
 			path = "Target Support Files/Pods-StyleCamera";
+			sourceTree = "<group>";
+		};
+		2848C0E8056CB6EE547CD6E0C1780766 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				80DB6C08B9B312D2B623E23F6515C0A5 /* MBProgressHUD.xcconfig */,
+				9895137673E5059F732A42A1E2A66E0B /* MBProgressHUD-dummy.m */,
+				AABE45081325970398177350B3365B5A /* MBProgressHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
 			sourceTree = "<group>";
 		};
 		41DA3AA1886E61699B8229DE8D7D2C0F /* Support Files */ = {
@@ -129,6 +190,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		5836A44A75C427EBF4739C55E2315758 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				077EB30DB6AD0F301EC92B8EAEA22722 /* MBProgressHUD */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7C25F12163315383A86A4FDA1A76D7CD /* CCCUIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,8 +213,9 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BB3B538C570850FA5F27BE02CAE720FF /* Development Pods */,
-				F4CDA5FA9197A41E0081E84F932906EB /* Frameworks */,
-				8F6F5D788E5BD34F010476792775B897 /* Products */,
+				24002A6670E6882ECD6250D3E60F9CB2 /* Frameworks */,
+				5836A44A75C427EBF4739C55E2315758 /* Pods */,
+				FB0F29FD4C97F397ABEB7598334FAF94 /* Products */,
 				C92E761BE9D3E56368F51851AE12B998 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -157,15 +227,6 @@
 			);
 			name = Classes;
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		8F6F5D788E5BD34F010476792775B897 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				72596813E3595BC5C9A8938CE4921BCD /* libCCCUIKit.a */,
-				499D793CB0FFA6C9286517BF9F31B631 /* libPods-StyleCamera.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		B6353184499D0F95EAFBCF2267B66C43 /* CCCCamera */ = {
@@ -209,20 +270,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E1ECCF01F11DC9AFB520DB56EC7D8F47 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				1E9B379BB3A8CDCEEECFC94B7B3C557F /* AVFoundation.framework */,
-				514B8433FE760E60ABD7F576C04A3D60 /* CoreImage.framework */,
-				95BFE39600C119244699BA73740C9F9E /* CoreMotion.framework */,
-				01AB9036850BC4AE326AFD312B09B74D /* Foundation.framework */,
-				87943CB17C29C4F65980A3B669E8074C /* ImageIO.framework */,
-				CA23112B152E0100CE83C07A5C037863 /* MobileCoreServices.framework */,
-				5786D9C7CF3138E583FCF0227E121870 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		E5511C2994344E7C9E4D61993BFE411B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,17 +279,43 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		F4CDA5FA9197A41E0081E84F932906EB /* Frameworks */ = {
+		E6C5BB519DA1FCE1BD853AF5B0BCCE02 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				E1ECCF01F11DC9AFB520DB56EC7D8F47 /* iOS */,
+				F4EFE3D18258320FA85742CCA4D2E089 /* AVFoundation.framework */,
+				E02D36019D0E2343AF2793D481418EDA /* CoreGraphics.framework */,
+				1C09F6BB3C3B07AA600AAA455FB1DDB6 /* CoreImage.framework */,
+				22281869D3BC97921C06B981212D3CCC /* CoreMotion.framework */,
+				EEEB5F81C9B5C6956EE97AFBD427871B /* Foundation.framework */,
+				EED8521183C107A9ABF28A44FFD2F5F5 /* ImageIO.framework */,
+				F593F50CA910A161F51F50FE1DFE02B7 /* MobileCoreServices.framework */,
+				AA630595D81FD008A28F51BE2B6DD605 /* QuartzCore.framework */,
+				DA91F342A34ACE5FB3F21C1414C726E2 /* UIKit.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FB0F29FD4C97F397ABEB7598334FAF94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1197AFDD59FAFC081894EE7D025C021 /* libCCCUIKit.a */,
+				E38D457A4C01340D357008EE0F55B316 /* libMBProgressHUD.a */,
+				F1DB37081092B30F047F220BE62CF706 /* libPods-StyleCamera.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1B1D84BCA4F7BDAE79C37DF88C9DCE23 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA321C98029015AA4895C0B26891D8F8 /* MBProgressHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8E5FCA19B253425231C18915CB751DBB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,21 +331,21 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		334A492BA02FD61A287A4A5C6761208A /* Pods-StyleCamera */ = {
+		586F2DFA9BDCC6675C2546793A69E5CC /* MBProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 014ABB94BC3D5D7B6478CD8086B2F068 /* Build configuration list for PBXNativeTarget "Pods-StyleCamera" */;
+			buildConfigurationList = 6B44251FA50022CA55D4B2FBE1468C76 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
 			buildPhases = (
-				018149FF0B03EF70586F30BCF74D6554 /* Sources */,
-				06B6A1DF5EF184BBED2A65A98BB65AA1 /* Frameworks */,
+				7E4305B404C5BA5156646C69578ADD62 /* Sources */,
+				F9AC974E3329F79899A7B3BE290FC894 /* Frameworks */,
+				1B1D84BCA4F7BDAE79C37DF88C9DCE23 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				222E33001CE127039A3C383B74B3979B /* PBXTargetDependency */,
 			);
-			name = "Pods-StyleCamera";
-			productName = "Pods-StyleCamera";
-			productReference = 499D793CB0FFA6C9286517BF9F31B631 /* libPods-StyleCamera.a */;
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = E38D457A4C01340D357008EE0F55B316 /* libMBProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		6FBA295C7FA9C834E1C7D02F252D2C79 /* CCCUIKit */ = {
@@ -289,7 +362,25 @@
 			);
 			name = CCCUIKit;
 			productName = CCCUIKit;
-			productReference = 72596813E3595BC5C9A8938CE4921BCD /* libCCCUIKit.a */;
+			productReference = C1197AFDD59FAFC081894EE7D025C021 /* libCCCUIKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E687DE504B73EA20ED2750A20BEB99A7 /* Pods-StyleCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B6E308E350D429FF705FED5822AC7AD /* Build configuration list for PBXNativeTarget "Pods-StyleCamera" */;
+			buildPhases = (
+				1B2CAD796026477AFED313B91991D082 /* Sources */,
+				5EB96BC80F1770362DA86A02A72D12C8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8079AE850ED45BD4CAD23063A2D7511 /* PBXTargetDependency */,
+				7BCE123DB285199422B1BA14C0B60558 /* PBXTargetDependency */,
+			);
+			name = "Pods-StyleCamera";
+			productName = "Pods-StyleCamera";
+			productReference = F1DB37081092B30F047F220BE62CF706 /* libPods-StyleCamera.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -309,22 +400,32 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 8F6F5D788E5BD34F010476792775B897 /* Products */;
+			productRefGroup = FB0F29FD4C97F397ABEB7598334FAF94 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6FBA295C7FA9C834E1C7D02F252D2C79 /* CCCUIKit */,
-				334A492BA02FD61A287A4A5C6761208A /* Pods-StyleCamera */,
+				586F2DFA9BDCC6675C2546793A69E5CC /* MBProgressHUD */,
+				E687DE504B73EA20ED2750A20BEB99A7 /* Pods-StyleCamera */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		018149FF0B03EF70586F30BCF74D6554 /* Sources */ = {
+		1B2CAD796026477AFED313B91991D082 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				547C596FA259A48F8BE7338D6F0BA027 /* Pods-StyleCamera-dummy.m in Sources */,
+				FD51D483B28594785B68C2112B080720 /* Pods-StyleCamera-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E4305B404C5BA5156646C69578ADD62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5229F5125ACD420659E7B2D19BB30A8 /* MBProgressHUD-dummy.m in Sources */,
+				536F7D0550F5FD9F5869CEC995CFEE9B /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,11 +443,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		222E33001CE127039A3C383B74B3979B /* PBXTargetDependency */ = {
+		7BCE123DB285199422B1BA14C0B60558 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 586F2DFA9BDCC6675C2546793A69E5CC /* MBProgressHUD */;
+			targetProxy = 936B1BC132EF306036D3E9F02CE92F92 /* PBXContainerItemProxy */;
+		};
+		B8079AE850ED45BD4CAD23063A2D7511 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CCCUIKit;
 			target = 6FBA295C7FA9C834E1C7D02F252D2C79 /* CCCUIKit */;
-			targetProxy = EDAD682D3856CBA9685A30034EEBB5B8 /* PBXContainerItemProxy */;
+			targetProxy = EE0A50115B1C1455974CE4576A665B60 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,6 +502,29 @@
 			};
 			name = Debug;
 		};
+		2D6505E4F84AB187E42E7D1F17C02FC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80DB6C08B9B312D2B623E23F6515C0A5 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		3200FEB2614DF976E80052C8B3655168 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC03C919D1BAFE1EE122A5C575741FBF /* CCCUIKit.xcconfig */;
@@ -417,29 +547,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
-		};
-		442582C0063CF4DD02E0821E3CB58094 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 803861154DAE26A5093F0D544D1FEC0E /* Pods-StyleCamera.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
 		};
 		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -481,6 +588,29 @@
 			};
 			name = Release;
 		};
+		57CD2A1AB5F3E12C6AE89C9BB8F28EFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 977894121203224FB1E01E1627662547 /* Pods-StyleCamera.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		5B04A54B529628A790726EBAD71C8C6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC03C919D1BAFE1EE122A5C575741FBF /* CCCUIKit.xcconfig */;
@@ -504,19 +634,42 @@
 			};
 			name = Release;
 		};
-		6B38723310883A12A212FE0D905BC51C /* Debug */ = {
+		81D27BBFE39221A11085CC94C71E9978 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 977894121203224FB1E01E1627662547 /* Pods-StyleCamera.debug.xcconfig */;
+			baseConfigurationReference = 80DB6C08B9B312D2B623E23F6515C0A5 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D608354DCDE794418AE42D3D0A06ACF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 803861154DAE26A5093F0D544D1FEC0E /* Pods-StyleCamera.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -525,20 +678,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		014ABB94BC3D5D7B6478CD8086B2F068 /* Build configuration list for PBXNativeTarget "Pods-StyleCamera" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6B38723310883A12A212FE0D905BC51C /* Debug */,
-				442582C0063CF4DD02E0821E3CB58094 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -553,6 +697,24 @@
 			buildConfigurations = (
 				3200FEB2614DF976E80052C8B3655168 /* Debug */,
 				5B04A54B529628A790726EBAD71C8C6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B6E308E350D429FF705FED5822AC7AD /* Build configuration list for PBXNativeTarget "Pods-StyleCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57CD2A1AB5F3E12C6AE89C9BB8F28EFA /* Debug */,
+				D608354DCDE794418AE42D3D0A06ACF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B44251FA50022CA55D4B2FBE1468C76 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D6505E4F84AB187E42E7D1F17C02FC3 /* Debug */,
+				81D27BBFE39221A11085CC94C71E9978 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

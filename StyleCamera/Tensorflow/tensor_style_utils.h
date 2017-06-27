@@ -44,14 +44,17 @@ typedef struct {
     UInt8 blue;
 } ARGBPixel;
 
-typedef struct {
-    int width;
-    int height;
-    ARGBPixel *pixelData;
-} ImageData;
-UIKIT_EXTERN ImageData EmptyImageData;
+@interface ImageData : NSObject
 
-UIKIT_EXTERN UIImage *createImageFromImageData(ImageData imageData);
+@property (nonatomic) int width;
+@property (nonatomic) int height;
+@property (nonatomic) ARGBPixel *pixelData;
+
+@end
+
+UIKIT_EXTERN UIImage *createImageFromImageData(ImageData *imageData,
+                                               CGFloat scale,
+                                               UIImageOrientation orientation);
 
 @interface tensor_style_utils : NSObject {
 @protected
@@ -63,9 +66,9 @@ UIKIT_EXTERN UIImage *createImageFromImageData(ImageData imageData);
 - (void)selectStyle:(int)index;
 - (void)clearStyle;
 
-- (ImageData)performStyleTransferWithCGImage:(CGImageRef)image;
-- (ImageData)performStyleTransferWithResourceName:(NSString *)resourceName
+- (ImageData *)performStyleTransferWithCGImage:(CGImageRef)image;
+- (ImageData *)performStyleTransferWithResourceName:(NSString *)resourceName
                                              type:(NSString *)extension;
-- (ImageData)performStyleTransferWithImagePath:(NSString *)imagePath;
+- (ImageData *)performStyleTransferWithImagePath:(NSString *)imagePath;
 
 @end

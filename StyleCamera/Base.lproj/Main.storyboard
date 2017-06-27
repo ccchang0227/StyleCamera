@@ -99,7 +99,7 @@
                                 <rect key="frame" x="16" y="30" width="343" height="53.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S37-7z-F2T">
-                                        <rect key="frame" x="0.0" y="0.0" width="303" height="53.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="53.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaO-Y6-2CT">
                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="53.5"/>
@@ -128,16 +128,28 @@
                                                     <action selector="selectResourceAction:" destination="lhc-ZQ-dLf" eventType="touchUpInside" id="Vz4-te-sDD"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztA-tW-Kwf">
+                                                <rect key="frame" x="303" y="0.0" width="74" height="53.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <inset key="contentEdgeInsets" minX="20" minY="5" maxX="20" maxY="5"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveImageAction:" destination="lhc-ZQ-dLf" eventType="touchUpInside" id="z2i-5f-oRP"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="VaO-Y6-2CT" secondAttribute="bottom" id="AYL-sX-Wsf"/>
                                             <constraint firstAttribute="bottom" secondItem="zaI-Tm-Zu4" secondAttribute="bottom" id="Aso-Z5-Brf"/>
+                                            <constraint firstAttribute="trailing" secondItem="ztA-tW-Kwf" secondAttribute="trailing" id="GTe-aB-Bi9"/>
                                             <constraint firstItem="VaO-Y6-2CT" firstAttribute="leading" secondItem="S37-7z-F2T" secondAttribute="leading" id="INj-Mw-0L2"/>
                                             <constraint firstItem="VaO-Y6-2CT" firstAttribute="top" secondItem="S37-7z-F2T" secondAttribute="top" id="ajc-lK-DF5"/>
-                                            <constraint firstAttribute="trailing" secondItem="SoD-xj-zU9" secondAttribute="trailing" id="awP-qm-Pkb"/>
+                                            <constraint firstItem="ztA-tW-Kwf" firstAttribute="top" secondItem="S37-7z-F2T" secondAttribute="top" id="hWo-0C-kOe"/>
+                                            <constraint firstAttribute="bottom" secondItem="ztA-tW-Kwf" secondAttribute="bottom" id="jzw-Ed-f0H"/>
                                             <constraint firstItem="SoD-xj-zU9" firstAttribute="top" secondItem="S37-7z-F2T" secondAttribute="top" id="ndc-xi-xtl"/>
                                             <constraint firstItem="zaI-Tm-Zu4" firstAttribute="top" secondItem="S37-7z-F2T" secondAttribute="top" id="r31-Gd-8He"/>
+                                            <constraint firstItem="SoD-xj-zU9" firstAttribute="trailing" secondItem="ztA-tW-Kwf" secondAttribute="leading" id="tC5-E7-NZL"/>
                                             <constraint firstItem="SoD-xj-zU9" firstAttribute="leading" secondItem="zaI-Tm-Zu4" secondAttribute="trailing" constant="10" id="tSn-ol-Thj"/>
                                             <constraint firstItem="zaI-Tm-Zu4" firstAttribute="leading" secondItem="VaO-Y6-2CT" secondAttribute="trailing" constant="10" id="yr9-Ov-FEf"/>
                                             <constraint firstAttribute="bottom" secondItem="SoD-xj-zU9" secondAttribute="bottom" id="zr6-HV-r1R"/>
