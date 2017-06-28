@@ -1,8 +1,10 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.2.0)
   - CCCUIKit/CCCCamera (1.0.4-beta)
   - MBProgressHUD (1.0.0)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
   - CCCUIKit/CCCCamera (from `~/Desktop/iOS/Pods/CCCUIKit`)
   - MBProgressHUD (~> 1.0.0)
 
@@ -11,9 +13,10 @@ EXTERNAL SOURCES:
     :path: "~/Desktop/iOS/Pods/CCCUIKit"
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   CCCUIKit: 1d31f7355ab5fad8806e8d348a956e3ce7e8e248
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
 
-PODFILE CHECKSUM: 36a3e6dd852d98897a9f36417cf8e94b763d72e8
+PODFILE CHECKSUM: 34c161951d26049c5ddb4ee5d19c58eb58675195
 
 COCOAPODS: 1.2.0

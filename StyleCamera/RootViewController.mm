@@ -10,9 +10,9 @@
 #import "StyleCollectionViewCell.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <CCCUIKit/UIImage+CCCProcessor.h>
+#import <ActionSheetPicker-3.0/ActionSheetPicker.h>
 
 #import "tensor_style_utils.h"
-#import "CCLPickerView.h"
 
 #define DEFAULT_SAMPLE_IMAGE_NAME       @"me"
 #define DEFAULT_SAMPLE_IMAGE_EXTENSION  @"png"
@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, ImageSource) {
     ImageSourceResource
 };
 
-@interface RootViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CCLPickerViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverControllerDelegate, UIPopoverPresentationControllerDelegate>
+@interface RootViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverControllerDelegate, UIPopoverPresentationControllerDelegate>
 
 @property (retain, nonatomic) UIPopoverController *popoverCtrl;
 
@@ -33,7 +33,6 @@ typedef NS_ENUM(NSInteger, ImageSource) {
 
 @property (retain, nonatomic) tensor_style_utils *tensorStyleUtils;
 
-@property (retain, nonatomic) CCLPickerView *cclPickerView;
 @property (retain, nonatomic) UIImagePickerController *imagePickerController;
 
 @property (nonatomic) ImageSource imageSource;
@@ -70,7 +69,6 @@ typedef NS_ENUM(NSInteger, ImageSource) {
     [_stylesCollectionView release];
     [_debugLabel release];
     [_tensorStyleUtils release];
-    [_cclPickerView release];
     [_resourceName release];
     [_resourceType release];
     [_imagePickerController release];
@@ -175,14 +173,35 @@ typedef NS_ENUM(NSInteger, ImageSource) {
 }
 
 - (IBAction)selectResourceAction:(UIButton *)sender {
-    CCLPickerView *pickerView = [[CCLPickerView alloc] initWithTitle:@"Select Resource"
-                                                            delegate:self
-                                                   cancelButtonTitle:@"Cancel"
-                                                     saveButtonTitle:@"OK"];
-    self.cclPickerView = pickerView;
-    [pickerView release];
+    NSArray<NSString *> *titles = @[@"狗",
+                                    @"吉芳",
+                                    @"信廷",
+                                    @"智傑",
+                                    @"誘人的背影"];
     
-    [self.cclPickerView showPickerViewFromView:sender];
+    [ActionSheetStringPicker showPickerWithTitle:@"Select Resource" rows:titles initialSelection:0 doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+        
+        self.imageSource = ImageSourceResource;
+        NSArray<NSString *> *names = @[@"sample",
+                                       @"fang",
+                                       @"shinting",
+                                       @"me",
+                                       @"monster"];
+        NSArray<NSString *> *types = @[@"jpeg",
+                                       @"png",
+                                       @"jpg",
+                                       @"png",
+                                       @"jpg"];
+        self.resourceName = names[selectedIndex];
+        self.resourceType = types[selectedIndex];
+        self.albumImage = nil;
+        
+        [self setDefault];
+        
+    }cancelBlock:^(ActionSheetStringPicker *picker) {
+        
+    }origin:sender];
+    
 }
 
 - (IBAction)saveImageAction:(id)sender {
@@ -254,6 +273,20 @@ typedef NS_ENUM(NSInteger, ImageSource) {
     cell.styleImageView.image = nil;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    cell.highlighted = YES;
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    cell.highlighted = NO;
+    
+}
+
 #pragma mark - UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -270,61 +303,6 @@ typedef NS_ENUM(NSInteger, ImageSource) {
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(5, 10, 5, 10);
-}
-
-#pragma mark - CCLPickerViewDelegate
-
-- (void)pickerViewDidSaveWithResult:(NSArray *)selectRowArray {
-    if (!selectRowArray || selectRowArray.count == 0) {
-        self.cclPickerView = nil;
-        return;
-    }
-    
-    self.imageSource = ImageSourceResource;
-    NSInteger row = [selectRowArray[0] integerValue];
-    NSArray<NSString *> *names = @[@"sample",
-                                   @"fang",
-                                   @"shinting",
-                                   @"me",
-                                   @"monster"];
-    NSArray<NSString *> *types = @[@"jpeg",
-                                   @"png",
-                                   @"jpg",
-                                   @"png",
-                                   @"jpg"];
-    self.resourceName = names[row];
-    self.resourceType = types[row];
-    self.albumImage = nil;
-    
-    [self setDefault];
-    
-    self.cclPickerView = nil;
-}
-
-- (void)pickerViewDidCancel {
-    self.cclPickerView = nil;
-}
-
-#pragma mark - UIPickerViewDataSource
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 5;
-}
-
-#pragma mark - UIPickerViewDelegate
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    
-    NSArray<NSString *> *titles = @[@"狗",
-                                    @"吉芳",
-                                    @"信廷",
-                                    @"智傑",
-                                    @"誘人的背影"];
-    return titles[row];
 }
 
 #pragma mark - UIImagePickerControllerDelegate

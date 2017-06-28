@@ -12,4 +12,6 @@
 
 @property (retain, nonatomic) IBOutlet UIImageView *styleImageView;
 
+@property (retain, nonatomic) IBOutlet UIView *highlightMaskView;
+
 @end

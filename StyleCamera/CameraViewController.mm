@@ -8,9 +8,13 @@
 
 #import "CameraViewController.h"
 #import "CCCStyleCameraView.h"
+#import "StyleCollectionViewCell.h"
+#import <ActionSheetPicker-3.0/ActionSheetPicker.h>
+
+#import "tensor_style_utils.h"
 
 
-@interface CameraViewController () <CCCStyleCameraViewDelegate> {
+@interface CameraViewController () <CCCStyleCameraViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {
     NSTimeInterval _previousFrameTime;
     CGFloat _fps;
 }
@@ -19,8 +23,16 @@
 
 @property (retain, nonatomic) IBOutlet CCCStyleCameraView *styleCameraView;
 @property (retain, nonatomic) IBOutlet UILabel *previewSizeLabel;
+@property (retain, nonatomic) IBOutlet UIButton *qualityButton;
+
+@property (retain, nonatomic) IBOutlet UIView *stylesView;
+@property (retain, nonatomic) IBOutlet UICollectionView *stylesCollectionView;
 
 @property (retain, nonatomic) NSTimer *fpsTimer;
+
+@property (retain, nonatomic) tensor_style_utils *tensorStyleUtils;
+
+@property (nonatomic) NSInteger selectedStyle;
 
 @end
 
@@ -31,9 +43,16 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     _previousFrameTime = 0;
+    _fps = 0;
+    _selectedStyle = 0;
+    
+    _tensorStyleUtils = [[tensor_style_utils alloc] init];
     
     self.styleCameraView.delegate = self;
-    self.styleCameraView.videoQuality = CCCCameraVideoQualityPhoto;
+    self.styleCameraView.videoQuality = CCCCameraVideoQualityMedium;
+    
+    self.stylesView.hidden = YES;
+    [self.stylesCollectionView registerNib:[UINib nibWithNibName:@"StyleCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"StyleCollectionViewCell"];
     
 }
 
@@ -49,6 +68,10 @@
     [_switchButton release];
     [_previewSizeLabel release];
     [_fpsTimer release];
+    [_tensorStyleUtils release];
+    [_qualityButton release];
+    [_stylesCollectionView release];
+    [_stylesView release];
     [super dealloc];
 }
 
@@ -66,7 +89,7 @@
     _fps = 0;
     [self.styleCameraView startCameraRunning];
     
-    self.fpsTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(displayFps:) userInfo:nil repeats:YES];
+    self.fpsTimer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(displayFps:) userInfo:nil repeats:YES];
     
 }
 
@@ -93,6 +116,51 @@
     }
     
     self.previewSizeLabel.text = nil;
+    
+    [self configureQuality];
+    
+}
+
+- (void)configureQuality {
+    switch (self.styleCameraView.videoQuality) {
+        case CCCCameraVideoQualityLow: {
+            [self.qualityButton setTitle:@"Low" forState:UIControlStateNormal];
+            break;
+        }
+        case CCCCameraVideoQualityMedium: {
+            [self.qualityButton setTitle:@"Medium" forState:UIControlStateNormal];
+            break;
+        }
+        case CCCCameraVideoQualityHigh: {
+            [self.qualityButton setTitle:@"High" forState:UIControlStateNormal];
+            break;
+        }
+        case CCCCameraVideoQuality352x288: {
+            [self.qualityButton setTitle:@"352x288" forState:UIControlStateNormal];
+            break;
+        }
+        case CCCCameraVideoQuality640x480: {
+            [self.qualityButton setTitle:@"640x480" forState:UIControlStateNormal];
+            break;
+        }
+        case CCCCameraVideoQuality960x540: {
+            [self.qualityButton setTitle:@"960x540" forState:UIControlStateNormal];
+            break;
+        }
+        case CCCCameraVideoQuality1280x720: {
+            [self.qualityButton setTitle:@"1280x720" forState:UIControlStateNormal];
+            break;
+        }
+        case CCCCameraVideoQuality1920x1080: {
+            [self.qualityButton setTitle:@"1920x1080" forState:UIControlStateNormal];
+            break;
+        }
+        default: {
+            [self.qualityButton setTitle:@"Photo" forState:UIControlStateNormal];
+            break;
+        }
+    }
+    
 }
 
 // 顯示FPS
@@ -125,6 +193,7 @@
             break;
         }
     }
+    [self configureQuality];
     
 }
 
@@ -132,16 +201,51 @@
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)selectQualityAction:(id)sender {
+    NSArray *qualityKeys = @[@(CCCCameraVideoQualityLow),
+                             @(CCCCameraVideoQualityMedium),
+                             @(CCCCameraVideoQualityHigh),
+                             @(CCCCameraVideoQuality352x288),
+                             @(CCCCameraVideoQuality640x480),
+                             @(CCCCameraVideoQuality960x540),
+                             @(CCCCameraVideoQuality1280x720),
+                             @(CCCCameraVideoQuality1920x1080),
+                             @(CCCCameraVideoQualityPhoto)];
+    NSArray *qualityStrings = @[@"Low",
+                                @"Medium",
+                                @"High",
+                                @"352x288",
+                                @"640x480",
+                                @"960x540",
+                                @"1280x720",
+                                @"1920x1080",
+                                @"Photo"];
+    NSInteger index = [qualityKeys indexOfObject:@(self.styleCameraView.videoQuality)];
+    
+    [ActionSheetStringPicker showPickerWithTitle:@"Select video quality" rows:qualityStrings initialSelection:index doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+        
+        self.styleCameraView.videoQuality = (CCCCameraVideoQuality)[qualityKeys[selectedIndex] integerValue];
+        [self configureQuality];
+        
+    }cancelBlock:^(ActionSheetStringPicker *picker) {
+        
+    }origin:sender];
+}
+
+- (IBAction)selectStyleAction:(id)sender {
+    self.stylesView.hidden = !self.stylesView.hidden;
+}
+
 #pragma mark - CCCStyleCameraViewDelegate
 
 - (void)cccStyleCameraViewDidStart:(CCCStyleCameraView *)cameraView {
+    
+    [self configureQuality];
     
 }
 
 - (CVImageBufferRef)cccStyleCameraView:(CCCStyleCameraView *)cameraView
                         processPreviewWithBuffer:(CVImageBufferRef)imageBuffer {
-    
-    //TODO: 合上tensorflow?
     
     // 計算FPS
     if (_previousFrameTime == 0) {
@@ -153,7 +257,90 @@
         _previousFrameTime = currentFrameTime;
     }
     
+    if (_selectedStyle == 0) {
+        return imageBuffer;
+    }
+    
+    //TODO: 合上tensorflow?
+    
     return imageBuffer;
+}
+
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return NUM_OF_STYLES+1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return [collectionView dequeueReusableCellWithReuseIdentifier:@"StyleCollectionViewCell" forIndexPath:indexPath];
+}
+
+#pragma mark - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+    _selectedStyle = indexPath.item;
+    if (indexPath.item == 0) {
+        [self.tensorStyleUtils clearStyle];
+    }
+    else {
+        [self.tensorStyleUtils selectStyle:(int)(indexPath.item-1)];
+    }
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(StyleCollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.item == 0) {
+        cell.styleImageView.image = [UIImage imageNamed:@"no_style"];
+    }
+    else {
+        cell.styleImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"style%ld", (long)(indexPath.item-1)]];
+    }
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(StyleCollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    cell.styleImageView.image = nil;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    cell.highlighted = YES;
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    cell.highlighted = NO;
+    
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(70, 70);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 10;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 10;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(5, 10, 5, 10);
 }
 
 @end

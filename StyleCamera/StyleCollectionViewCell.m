@@ -13,11 +13,22 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    self.highlightMaskView.hidden = YES;
+    
 }
 
 - (void)dealloc {
     [_styleImageView release];
+    [_highlightMaskView release];
     [super dealloc];
+}
+
+- (void)setHighlighted:(BOOL)highlighted {
+    [super setHighlighted:highlighted];
+    
+    self.highlightMaskView.hidden = !highlighted;
+    
 }
 
 @end

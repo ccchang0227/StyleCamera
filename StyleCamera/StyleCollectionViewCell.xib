@@ -22,15 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yhz-ni-p1K">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="Yhz-ni-p1K" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MnI-Wm-t8F"/>
                 <constraint firstAttribute="trailing" secondItem="obk-qr-W6h" secondAttribute="trailing" id="cW7-N1-Cxf"/>
+                <constraint firstItem="Yhz-ni-p1K" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dD6-Xb-P1r"/>
                 <constraint firstItem="obk-qr-W6h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="o6w-0c-3fh"/>
+                <constraint firstAttribute="bottom" secondItem="Yhz-ni-p1K" secondAttribute="bottom" id="qH4-Yh-Yt5"/>
+                <constraint firstAttribute="trailing" secondItem="Yhz-ni-p1K" secondAttribute="trailing" id="uhc-xF-reu"/>
                 <constraint firstAttribute="bottom" secondItem="obk-qr-W6h" secondAttribute="bottom" id="wOg-8T-kFV"/>
                 <constraint firstItem="obk-qr-W6h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xbO-bJ-Z3D"/>
             </constraints>
             <connections>
+                <outlet property="highlightMaskView" destination="Yhz-ni-p1K" id="pNH-PY-4cb"/>
                 <outlet property="styleImageView" destination="obk-qr-W6h" id="GMu-xL-8fo"/>
             </connections>
         </collectionViewCell>

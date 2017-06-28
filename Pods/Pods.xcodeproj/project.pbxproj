@@ -9,83 +9,137 @@
 /* Begin PBXBuildFile section */
 		02F692C47A5AC53AA58B2CDCB24B503A /* UIImage+CCCProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DE5575A7952DFACA3EB9FF30D0D29D /* UIImage+CCCProcessor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		040A963578A44261BFA72F26D2E6A8EF /* CCCCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C6CA2FFB74417983C77CE0A8CF820E /* CCCCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E4FB243784D529ADD5889D2C88FC6BD /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F6AE2917B421BA69C0BBEDFA289368B0 /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		175701933065379CBA9F60DEA26073E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEB5F81C9B5C6956EE97AFBD427871B /* Foundation.framework */; };
+		20712EFE41E12D66D88C95F0C18DB88D /* ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D309A20D1C1C2D3A98BC8D6067612F1 /* ActionSheetPicker-3.0-dummy.m */; };
+		21153D5C3C97C43C32CC0D70FAAE7FC8 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D406A7A5BD67248C96473E088A3AA /* ActionSheetDistancePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		25A8F5282C4B8C0820A79D639AE07EE4 /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B54B0A7495158EB178140E197841C68 /* ActionSheetMultipleStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27F58C1777A8122D23EEABDFF07B8C8B /* UIImage+CCCProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 25173151850A41B2FE89C4694CBA5D27 /* UIImage+CCCProcessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D6E7C89B68ED6DAF528F3686B165D54 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1B8B1508B1391CAA1CBF2EB6C87EF /* SWActionSheet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		434A2E1B724D914DFF3B25E3F3256922 /* CCCCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1873724377E06D70A46CC8F6162F6D /* CCCCameraView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		44053DE53518AD87D8A9560B26296B45 /* CCCCameraSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 168DEFFD8041EBFC78FDB416BFFE8600 /* CCCCameraSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		49DF19738E4A78C0A599615EC7E0286A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEB5F81C9B5C6956EE97AFBD427871B /* Foundation.framework */; };
+		45B377D736CDC3929B39ED4B314EF87A /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 16352ADB241FA8DE0BD81250456C67F8 /* ActionSheetLocalePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		4E369C0DE3912515E02BA9DFE173B0CB /* CCCUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6546CE287B22096A25FBE48A77BA7925 /* CCCUIKit-dummy.m */; };
-		536F7D0550F5FD9F5869CEC995CFEE9B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 30858F8F84BD7A73D99478028C4C0E9A /* MBProgressHUD.m */; };
+		536F7D0550F5FD9F5869CEC995CFEE9B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D6204B5E3FC33B166F5A21D9BAB3285F /* MBProgressHUD.m */; };
+		55BCB2DD091AA8B197FCAB6D5239E25A /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = F2720632B41C507592B05D30A10ADC32 /* ActionSheetDistancePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55D9A1209934963525BFF8C76C49E6AE /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B2F5FBDA4B14E95B5EC8AD49194BEC5 /* SWActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		594E571BB9C45B1BFDA2CE3F5AD6D9BD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EFE3D18258320FA85742CCA4D2E089 /* AVFoundation.framework */; };
+		5ACF3721E21CF52E4183C2EC661FF6D2 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A850959A09609A36A90D3242A7377523 /* ActionSheetMultipleStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6B360DB3065EF16A9FF8678DDD13CF11 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4488C3C84B8B37BB4BBDEB2020A4DAC /* DistancePickerView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		71F9C341C1DC78EBD6BBB634EDB73CB2 /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D6C954A3362E4ED0997E28ED43AE212 /* ActionSheetDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		726EA5C8BABECF2237148BCB623A24E7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F593F50CA910A161F51F50FE1DFE02B7 /* MobileCoreServices.framework */; };
+		73123672EA485F125B57FC7F150E3738 /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EA867CC8BCE7E1CE95CB9C8372601C6 /* ActionSheetStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E61B514463A6BDED9317FF86FBB7283 /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 10C21971B0EA621E673DE5DF03958D22 /* ActionSheetLocalePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85A2DAC65D8E4B558DB843F50A6090F8 /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = D3268BE3D977930E531553EA7C8A88A0 /* DistancePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C9B1DC3568E2881FF159096A119F748 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E02D36019D0E2343AF2793D481418EDA /* CoreGraphics.framework */; };
 		93A0BC8A3E50A5DBF9D4A159FE3B773D /* CCCCameraConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = B9C72858EFB07A5570E6675CD8FB50D4 /* CCCCameraConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9489EE8A33CFCE786DC1416587910C14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEB5F81C9B5C6956EE97AFBD427871B /* Foundation.framework */; };
+		96D486262ABC2BB4DA5DB6965B0A71F8 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8329354D416B650774FA585E4D09DE6C /* ActionSheetCustomPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A752C7C7474AE3ABB0634B4F6D1890A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEB5F81C9B5C6956EE97AFBD427871B /* Foundation.framework */; };
 		CA3798D44C55F5DC8123B4E36AFD14CB /* CCCCameraView.h in Headers */ = {isa = PBXBuildFile; fileRef = E06321D3418835DF9EDE5B44B770F415 /* CCCCameraView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA5E682B018BF5756152E04FE2F23909 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEB5F81C9B5C6956EE97AFBD427871B /* Foundation.framework */; };
+		CB9EEA252AD14131B46968F5652CD526 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C365AC62F78A273E45F999AE8DD1D /* ActionSheetStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		CBA3B8676CD21E6243EA4D70D3D63FD2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C09F6BB3C3B07AA600AAA455FB1DDB6 /* CoreImage.framework */; };
+		CD745754A8A188DFE16ABE33F52C811B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA91F342A34ACE5FB3F21C1414C726E2 /* UIKit.framework */; };
 		D094EFD566E207E3CB7DDB0147AC28B5 /* CCCCameraSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E79B090A0CB6FFDDD0A5C2F19ECF46AF /* CCCCameraSession.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D415D0767A8AF457434FFFB5957D4616 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA630595D81FD008A28F51BE2B6DD605 /* QuartzCore.framework */; };
+		DDC717E57AAD786D5903C149AB8DC4CD /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = C8A15DE247DDC7A2FE3A580F7AAF16D2 /* ActionSheetCustomPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF4C2570591225B8EE4BDBBC010B51FC /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED36E12CE0A0A2717CCF069CB81F7F /* ActionSheetDatePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E14BBD754C41FDE5C7155C2AC313E049 /* Pods-StyleCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD229F90A9B05ED03EE3A100257009E1 /* Pods-StyleCamera-dummy.m */; };
 		E1B7AA152744583F41088674BA09B8BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA91F342A34ACE5FB3F21C1414C726E2 /* UIKit.framework */; };
-		E5229F5125ACD420659E7B2D19BB30A8 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9895137673E5059F732A42A1E2A66E0B /* MBProgressHUD-dummy.m */; };
+		E5229F5125ACD420659E7B2D19BB30A8 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E568344467FC295708A9E635C1C6CA3C /* MBProgressHUD-dummy.m */; };
 		E7F33DB8317D799AAADA0DAC888B1538 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22281869D3BC97921C06B981212D3CCC /* CoreMotion.framework */; };
-		EA321C98029015AA4895C0B26891D8F8 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E67CBBACD85CE50C19C6320AAD17088 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD51D483B28594785B68C2112B080720 /* Pods-StyleCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD229F90A9B05ED03EE3A100257009E1 /* Pods-StyleCamera-dummy.m */; };
+		EA321C98029015AA4895C0B26891D8F8 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = C3E78159C0190C25D69C4A113EC3254E /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA432A69AD6E9D7D06FCB0744ED7F3F0 /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C698991D3F50238991A7A71F271ED44 /* ActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC73AB83A3DB3D332B13EDCAF26C57E6 /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = B6ACD9DE8A0BA6FB5A99CA5044DDA014 /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC758E9A95614DF70FE04551B3FE4023 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 837B8D2ADA2441534E59FAA61B1F0F48 /* AbstractActionSheetPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		FE074E657B0727A77D30256D6A314B05 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED8521183C107A9ABF28A44FFD2F5F5 /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		936B1BC132EF306036D3E9F02CE92F92 /* PBXContainerItemProxy */ = {
+		1F8C5037672B4C8A6C82C2BF5FA67A98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 586F2DFA9BDCC6675C2546793A69E5CC;
 			remoteInfo = MBProgressHUD;
 		};
-		EE0A50115B1C1455974CE4576A665B60 /* PBXContainerItemProxy */ = {
+		E74FC17831BD35971CEE1588995A236E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6FBA295C7FA9C834E1C7D02F252D2C79;
 			remoteInfo = CCCUIKit;
 		};
+		F16C68D4BF65ABEFC08D20DAE120F0CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98DE1C9B1F48D74E0233313D4CB4EABB;
+			remoteInfo = "ActionSheetPicker-3.0";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0AC9F439184EA8AF0E2D304F99AFB907 /* Pods-StyleCamera-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StyleCamera-acknowledgements.markdown"; sourceTree = "<group>"; };
+		10C21971B0EA621E673DE5DF03958D22 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		16352ADB241FA8DE0BD81250456C67F8 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
 		168DEFFD8041EBFC78FDB416BFFE8600 /* CCCCameraSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CCCCameraSession.h; sourceTree = "<group>"; };
+		1B2F5FBDA4B14E95B5EC8AD49194BEC5 /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = Pickers/SWActionSheet.h; sourceTree = "<group>"; };
 		1C09F6BB3C3B07AA600AAA455FB1DDB6 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
-		1E67CBBACD85CE50C19C6320AAD17088 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		21ED36E12CE0A0A2717CCF069CB81F7F /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
 		22281869D3BC97921C06B981212D3CCC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		24C6CA2FFB74417983C77CE0A8CF820E /* CCCCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CCCCamera.h; sourceTree = "<group>"; };
 		25173151850A41B2FE89C4694CBA5D27 /* UIImage+CCCProcessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+CCCProcessor.h"; sourceTree = "<group>"; };
-		30858F8F84BD7A73D99478028C4C0E9A /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2C698991D3F50238991A7A71F271ED44 /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
+		2E7C43B13B84391604DA4E85CE14A864 /* ActionSheetPicker-3.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-prefix.pch"; sourceTree = "<group>"; };
+		3D6C954A3362E4ED0997E28ED43AE212 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		3EA867CC8BCE7E1CE95CB9C8372601C6 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		45FBB0269A393CDC13A1DA201843FAE1 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		4B4BA30A4BE68CB1AC7ED236FE63A4D7 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B54B0A7495158EB178140E197841C68 /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
 		5D4CAA94D6EDF4C8EDA0C40B88E616C8 /* Pods-StyleCamera-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StyleCamera-frameworks.sh"; sourceTree = "<group>"; };
+		5F0D406A7A5BD67248C96473E088A3AA /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
 		6546CE287B22096A25FBE48A77BA7925 /* CCCUIKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CCCUIKit-dummy.m"; sourceTree = "<group>"; };
+		6BC150C28CBBEB1428C2D07C198789FA /* libCCCUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCCCUIKit.a; path = libCCCUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D309A20D1C1C2D3A98BC8D6067612F1 /* ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
+		6E3C365AC62F78A273E45F999AE8DD1D /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		752EFB19421AD7F6C87E32934A670ECE /* libActionSheetPicker-3.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libActionSheetPicker-3.0.a"; path = "libActionSheetPicker-3.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		803861154DAE26A5093F0D544D1FEC0E /* Pods-StyleCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StyleCamera.release.xcconfig"; sourceTree = "<group>"; };
-		80DB6C08B9B312D2B623E23F6515C0A5 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		8329354D416B650774FA585E4D09DE6C /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		837B8D2ADA2441534E59FAA61B1F0F48 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		85B7E96B85CCECAECF742401E61CCF9E /* ActionSheetPicker-3.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.xcconfig"; sourceTree = "<group>"; };
 		92A2327719F9D4A3B5FBEDB41DBFA476 /* CCCUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCCUIKit-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9425C2CE1569C3FF262A0BA215A5AE98 /* CCCCamera_Light.png */ = {isa = PBXFileReference; includeInIndex = 1; path = CCCCamera_Light.png; sourceTree = "<group>"; };
 		977894121203224FB1E01E1627662547 /* Pods-StyleCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StyleCamera.debug.xcconfig"; sourceTree = "<group>"; };
-		9895137673E5059F732A42A1E2A66E0B /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		98C3F534D7A9AE4F23FD85232098F3B6 /* Pods-StyleCamera-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StyleCamera-resources.sh"; sourceTree = "<group>"; };
+		A2BEF8DE17371DB41FB3153570E00993 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		A850959A09609A36A90D3242A7377523 /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
 		AA630595D81FD008A28F51BE2B6DD605 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		AABE45081325970398177350B3365B5A /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		AC03C919D1BAFE1EE122A5C575741FBF /* CCCUIKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCCUIKit.xcconfig; sourceTree = "<group>"; };
+		B6ACD9DE8A0BA6FB5A99CA5044DDA014 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
 		B9C72858EFB07A5570E6675CD8FB50D4 /* CCCCameraConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CCCCameraConstants.h; sourceTree = "<group>"; };
-		C1197AFDD59FAFC081894EE7D025C021 /* libCCCUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCCCUIKit.a; path = libCCCUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3E78159C0190C25D69C4A113EC3254E /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C6D1B8B1508B1391CAA1CBF2EB6C87EF /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = Pickers/SWActionSheet.m; sourceTree = "<group>"; };
+		C8A15DE247DDC7A2FE3A580F7AAF16D2 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		D3268BE3D977930E531553EA7C8A88A0 /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = Pickers/DistancePickerView.h; sourceTree = "<group>"; };
+		D6204B5E3FC33B166F5A21D9BAB3285F /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		DA91F342A34ACE5FB3F21C1414C726E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		DD229F90A9B05ED03EE3A100257009E1 /* Pods-StyleCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StyleCamera-dummy.m"; sourceTree = "<group>"; };
 		E02D36019D0E2343AF2793D481418EDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		E06321D3418835DF9EDE5B44B770F415 /* CCCCameraView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CCCCameraView.h; sourceTree = "<group>"; };
 		E214BBD473D00428A6984599601AE557 /* Pods-StyleCamera-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StyleCamera-acknowledgements.plist"; sourceTree = "<group>"; };
-		E38D457A4C01340D357008EE0F55B316 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4488C3C84B8B37BB4BBDEB2020A4DAC /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = Pickers/DistancePickerView.m; sourceTree = "<group>"; };
+		E568344467FC295708A9E635C1C6CA3C /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		E79B090A0CB6FFDDD0A5C2F19ECF46AF /* CCCCameraSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CCCCameraSession.m; sourceTree = "<group>"; };
 		EED8521183C107A9ABF28A44FFD2F5F5 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		EEEB5F81C9B5C6956EE97AFBD427871B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		F1DB37081092B30F047F220BE62CF706 /* libPods-StyleCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-StyleCamera.a"; path = "libPods-StyleCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2720632B41C507592B05D30A10ADC32 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
 		F4EFE3D18258320FA85742CCA4D2E089 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		F593F50CA910A161F51F50FE1DFE02B7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		F6AE2917B421BA69C0BBEDFA289368B0 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		F99A0B87203EBBE8622E4222B99C20BD /* libPods-StyleCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-StyleCamera.a"; path = "libPods-StyleCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9DE5575A7952DFACA3EB9FF30D0D29D /* UIImage+CCCProcessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CCCProcessor.m"; sourceTree = "<group>"; };
 		FD1873724377E06D70A46CC8F6162F6D /* CCCCameraView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CCCCameraView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,11 +159,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EB96BC80F1770362DA86A02A72D12C8 /* Frameworks */ = {
+		879AAB25C2D9615F12880352C40CDA23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49DF19738E4A78C0A599615EC7E0286A /* Foundation.framework in Frameworks */,
+				175701933065379CBA9F60DEA26073E6 /* Foundation.framework in Frameworks */,
+				CD745754A8A188DFE16ABE33F52C811B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB6780ABF01F70C14E89F88C6B27CEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9489EE8A33CFCE786DC1416587910C14 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,15 +189,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		077EB30DB6AD0F301EC92B8EAEA22722 /* MBProgressHUD */ = {
+		12776B2B629964BB6D08367824AACD8A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1E67CBBACD85CE50C19C6320AAD17088 /* MBProgressHUD.h */,
-				30858F8F84BD7A73D99478028C4C0E9A /* MBProgressHUD.m */,
-				2848C0E8056CB6EE547CD6E0C1780766 /* Support Files */,
+				A2BEF8DE17371DB41FB3153570E00993 /* MBProgressHUD.xcconfig */,
+				E568344467FC295708A9E635C1C6CA3C /* MBProgressHUD-dummy.m */,
+				45FBB0269A393CDC13A1DA201843FAE1 /* MBProgressHUD-prefix.pch */,
 			);
-			name = MBProgressHUD;
-			path = MBProgressHUD;
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
 			sourceTree = "<group>";
 		};
 		24002A6670E6882ECD6250D3E60F9CB2 /* Frameworks */ = {
@@ -160,17 +223,6 @@
 			path = "Target Support Files/Pods-StyleCamera";
 			sourceTree = "<group>";
 		};
-		2848C0E8056CB6EE547CD6E0C1780766 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				80DB6C08B9B312D2B623E23F6515C0A5 /* MBProgressHUD.xcconfig */,
-				9895137673E5059F732A42A1E2A66E0B /* MBProgressHUD-dummy.m */,
-				AABE45081325970398177350B3365B5A /* MBProgressHUD-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MBProgressHUD";
-			sourceTree = "<group>";
-		};
 		41DA3AA1886E61699B8229DE8D7D2C0F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,10 +242,40 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		5836A44A75C427EBF4739C55E2315758 /* Pods */ = {
+		52154CA64072A943596C8EA2966146CE /* ActionSheetPicker-3.0 */ = {
 			isa = PBXGroup;
 			children = (
-				077EB30DB6AD0F301EC92B8EAEA22722 /* MBProgressHUD */,
+				B6ACD9DE8A0BA6FB5A99CA5044DDA014 /* AbstractActionSheetPicker.h */,
+				837B8D2ADA2441534E59FAA61B1F0F48 /* AbstractActionSheetPicker.m */,
+				C8A15DE247DDC7A2FE3A580F7AAF16D2 /* ActionSheetCustomPicker.h */,
+				8329354D416B650774FA585E4D09DE6C /* ActionSheetCustomPicker.m */,
+				F6AE2917B421BA69C0BBEDFA289368B0 /* ActionSheetCustomPickerDelegate.h */,
+				3D6C954A3362E4ED0997E28ED43AE212 /* ActionSheetDatePicker.h */,
+				21ED36E12CE0A0A2717CCF069CB81F7F /* ActionSheetDatePicker.m */,
+				F2720632B41C507592B05D30A10ADC32 /* ActionSheetDistancePicker.h */,
+				5F0D406A7A5BD67248C96473E088A3AA /* ActionSheetDistancePicker.m */,
+				10C21971B0EA621E673DE5DF03958D22 /* ActionSheetLocalePicker.h */,
+				16352ADB241FA8DE0BD81250456C67F8 /* ActionSheetLocalePicker.m */,
+				5B54B0A7495158EB178140E197841C68 /* ActionSheetMultipleStringPicker.h */,
+				A850959A09609A36A90D3242A7377523 /* ActionSheetMultipleStringPicker.m */,
+				2C698991D3F50238991A7A71F271ED44 /* ActionSheetPicker.h */,
+				3EA867CC8BCE7E1CE95CB9C8372601C6 /* ActionSheetStringPicker.h */,
+				6E3C365AC62F78A273E45F999AE8DD1D /* ActionSheetStringPicker.m */,
+				D3268BE3D977930E531553EA7C8A88A0 /* DistancePickerView.h */,
+				E4488C3C84B8B37BB4BBDEB2020A4DAC /* DistancePickerView.m */,
+				1B2F5FBDA4B14E95B5EC8AD49194BEC5 /* SWActionSheet.h */,
+				C6D1B8B1508B1391CAA1CBF2EB6C87EF /* SWActionSheet.m */,
+				8C0DFE3BEAD578C36DF3A79EC2B3988B /* Support Files */,
+			);
+			name = "ActionSheetPicker-3.0";
+			path = "ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		7A9028472BA4386E74E34B3D22272FB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52154CA64072A943596C8EA2966146CE /* ActionSheetPicker-3.0 */,
+				B009E9F061455DA1BF5EB67EA0E31581 /* MBProgressHUD */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -214,8 +296,8 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BB3B538C570850FA5F27BE02CAE720FF /* Development Pods */,
 				24002A6670E6882ECD6250D3E60F9CB2 /* Frameworks */,
-				5836A44A75C427EBF4739C55E2315758 /* Pods */,
-				FB0F29FD4C97F397ABEB7598334FAF94 /* Products */,
+				7A9028472BA4386E74E34B3D22272FB2 /* Pods */,
+				836CBE19B1D74D07937ABC853CC62D54 /* Products */,
 				C92E761BE9D3E56368F51851AE12B998 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -227,6 +309,39 @@
 			);
 			name = Classes;
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		836CBE19B1D74D07937ABC853CC62D54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				752EFB19421AD7F6C87E32934A670ECE /* libActionSheetPicker-3.0.a */,
+				6BC150C28CBBEB1428C2D07C198789FA /* libCCCUIKit.a */,
+				4B4BA30A4BE68CB1AC7ED236FE63A4D7 /* libMBProgressHUD.a */,
+				F99A0B87203EBBE8622E4222B99C20BD /* libPods-StyleCamera.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C0DFE3BEAD578C36DF3A79EC2B3988B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				85B7E96B85CCECAECF742401E61CCF9E /* ActionSheetPicker-3.0.xcconfig */,
+				6D309A20D1C1C2D3A98BC8D6067612F1 /* ActionSheetPicker-3.0-dummy.m */,
+				2E7C43B13B84391604DA4E85CE14A864 /* ActionSheetPicker-3.0-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		B009E9F061455DA1BF5EB67EA0E31581 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C3E78159C0190C25D69C4A113EC3254E /* MBProgressHUD.h */,
+				D6204B5E3FC33B166F5A21D9BAB3285F /* MBProgressHUD.m */,
+				12776B2B629964BB6D08367824AACD8A /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		B6353184499D0F95EAFBCF2267B66C43 /* CCCCamera */ = {
@@ -295,16 +410,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		FB0F29FD4C97F397ABEB7598334FAF94 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C1197AFDD59FAFC081894EE7D025C021 /* libCCCUIKit.a */,
-				E38D457A4C01340D357008EE0F55B316 /* libMBProgressHUD.a */,
-				F1DB37081092B30F047F220BE62CF706 /* libPods-StyleCamera.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -313,6 +418,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA321C98029015AA4895C0B26891D8F8 /* MBProgressHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D2E5FB9D2867AE8DC3FA3AA28D81C8D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC73AB83A3DB3D332B13EDCAF26C57E6 /* AbstractActionSheetPicker.h in Headers */,
+				DDC717E57AAD786D5903C149AB8DC4CD /* ActionSheetCustomPicker.h in Headers */,
+				0E4FB243784D529ADD5889D2C88FC6BD /* ActionSheetCustomPickerDelegate.h in Headers */,
+				71F9C341C1DC78EBD6BBB634EDB73CB2 /* ActionSheetDatePicker.h in Headers */,
+				55BCB2DD091AA8B197FCAB6D5239E25A /* ActionSheetDistancePicker.h in Headers */,
+				7E61B514463A6BDED9317FF86FBB7283 /* ActionSheetLocalePicker.h in Headers */,
+				25A8F5282C4B8C0820A79D639AE07EE4 /* ActionSheetMultipleStringPicker.h in Headers */,
+				EA432A69AD6E9D7D06FCB0744ED7F3F0 /* ActionSheetPicker.h in Headers */,
+				73123672EA485F125B57FC7F150E3738 /* ActionSheetStringPicker.h in Headers */,
+				85A2DAC65D8E4B558DB843F50A6090F8 /* DistancePickerView.h in Headers */,
+				55D9A1209934963525BFF8C76C49E6AE /* SWActionSheet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +468,7 @@
 			);
 			name = MBProgressHUD;
 			productName = MBProgressHUD;
-			productReference = E38D457A4C01340D357008EE0F55B316 /* libMBProgressHUD.a */;
+			productReference = 4B4BA30A4BE68CB1AC7ED236FE63A4D7 /* libMBProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		6FBA295C7FA9C834E1C7D02F252D2C79 /* CCCUIKit */ = {
@@ -362,25 +485,43 @@
 			);
 			name = CCCUIKit;
 			productName = CCCUIKit;
-			productReference = C1197AFDD59FAFC081894EE7D025C021 /* libCCCUIKit.a */;
+			productReference = 6BC150C28CBBEB1428C2D07C198789FA /* libCCCUIKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E687DE504B73EA20ED2750A20BEB99A7 /* Pods-StyleCamera */ = {
+		98DE1C9B1F48D74E0233313D4CB4EABB /* ActionSheetPicker-3.0 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B6E308E350D429FF705FED5822AC7AD /* Build configuration list for PBXNativeTarget "Pods-StyleCamera" */;
+			buildConfigurationList = FC2ED7457B54BD9FD736B9FF543F851E /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */;
 			buildPhases = (
-				1B2CAD796026477AFED313B91991D082 /* Sources */,
-				5EB96BC80F1770362DA86A02A72D12C8 /* Frameworks */,
+				D5179BC4FC1036B30711E44E248723F3 /* Sources */,
+				879AAB25C2D9615F12880352C40CDA23 /* Frameworks */,
+				6D2E5FB9D2867AE8DC3FA3AA28D81C8D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B8079AE850ED45BD4CAD23063A2D7511 /* PBXTargetDependency */,
-				7BCE123DB285199422B1BA14C0B60558 /* PBXTargetDependency */,
+			);
+			name = "ActionSheetPicker-3.0";
+			productName = "ActionSheetPicker-3.0";
+			productReference = 752EFB19421AD7F6C87E32934A670ECE /* libActionSheetPicker-3.0.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C2866979A899BBA982605D514A0C5556 /* Pods-StyleCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842EEB60EB92EC122F52AB1E08F6D398 /* Build configuration list for PBXNativeTarget "Pods-StyleCamera" */;
+			buildPhases = (
+				127038373B40A5E920E6E1E8F8B771FE /* Sources */,
+				CFB6780ABF01F70C14E89F88C6B27CEF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB15405B318319058BA9C03BBFF98780 /* PBXTargetDependency */,
+				417B0F5C3390874B6E8C77503925DF42 /* PBXTargetDependency */,
+				10C4D28756137B153CB21FE7A95D991D /* PBXTargetDependency */,
 			);
 			name = "Pods-StyleCamera";
 			productName = "Pods-StyleCamera";
-			productReference = F1DB37081092B30F047F220BE62CF706 /* libPods-StyleCamera.a */;
+			productReference = F99A0B87203EBBE8622E4222B99C20BD /* libPods-StyleCamera.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -400,23 +541,24 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = FB0F29FD4C97F397ABEB7598334FAF94 /* Products */;
+			productRefGroup = 836CBE19B1D74D07937ABC853CC62D54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				98DE1C9B1F48D74E0233313D4CB4EABB /* ActionSheetPicker-3.0 */,
 				6FBA295C7FA9C834E1C7D02F252D2C79 /* CCCUIKit */,
 				586F2DFA9BDCC6675C2546793A69E5CC /* MBProgressHUD */,
-				E687DE504B73EA20ED2750A20BEB99A7 /* Pods-StyleCamera */,
+				C2866979A899BBA982605D514A0C5556 /* Pods-StyleCamera */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1B2CAD796026477AFED313B91991D082 /* Sources */ = {
+		127038373B40A5E920E6E1E8F8B771FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD51D483B28594785B68C2112B080720 /* Pods-StyleCamera-dummy.m in Sources */,
+				E14BBD754C41FDE5C7155C2AC313E049 /* Pods-StyleCamera-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +568,23 @@
 			files = (
 				E5229F5125ACD420659E7B2D19BB30A8 /* MBProgressHUD-dummy.m in Sources */,
 				536F7D0550F5FD9F5869CEC995CFEE9B /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5179BC4FC1036B30711E44E248723F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC758E9A95614DF70FE04551B3FE4023 /* AbstractActionSheetPicker.m in Sources */,
+				96D486262ABC2BB4DA5DB6965B0A71F8 /* ActionSheetCustomPicker.m in Sources */,
+				DF4C2570591225B8EE4BDBBC010B51FC /* ActionSheetDatePicker.m in Sources */,
+				21153D5C3C97C43C32CC0D70FAAE7FC8 /* ActionSheetDistancePicker.m in Sources */,
+				45B377D736CDC3929B39ED4B314EF87A /* ActionSheetLocalePicker.m in Sources */,
+				5ACF3721E21CF52E4183C2EC661FF6D2 /* ActionSheetMultipleStringPicker.m in Sources */,
+				20712EFE41E12D66D88C95F0C18DB88D /* ActionSheetPicker-3.0-dummy.m in Sources */,
+				CB9EEA252AD14131B46968F5652CD526 /* ActionSheetStringPicker.m in Sources */,
+				6B360DB3065EF16A9FF8678DDD13CF11 /* DistancePickerView.m in Sources */,
+				3D6E7C89B68ED6DAF528F3686B165D54 /* SWActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,21 +602,50 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7BCE123DB285199422B1BA14C0B60558 /* PBXTargetDependency */ = {
+		10C4D28756137B153CB21FE7A95D991D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
 			target = 586F2DFA9BDCC6675C2546793A69E5CC /* MBProgressHUD */;
-			targetProxy = 936B1BC132EF306036D3E9F02CE92F92 /* PBXContainerItemProxy */;
+			targetProxy = 1F8C5037672B4C8A6C82C2BF5FA67A98 /* PBXContainerItemProxy */;
 		};
-		B8079AE850ED45BD4CAD23063A2D7511 /* PBXTargetDependency */ = {
+		417B0F5C3390874B6E8C77503925DF42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CCCUIKit;
 			target = 6FBA295C7FA9C834E1C7D02F252D2C79 /* CCCUIKit */;
-			targetProxy = EE0A50115B1C1455974CE4576A665B60 /* PBXContainerItemProxy */;
+			targetProxy = E74FC17831BD35971CEE1588995A236E /* PBXContainerItemProxy */;
+		};
+		AB15405B318319058BA9C03BBFF98780 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ActionSheetPicker-3.0";
+			target = 98DE1C9B1F48D74E0233313D4CB4EABB /* ActionSheetPicker-3.0 */;
+			targetProxy = F16C68D4BF65ABEFC08D20DAE120F0CB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		002DDB709F832F73F9713ACD248E28F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85B7E96B85CCECAECF742401E61CCF9E /* ActionSheetPicker-3.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -502,9 +690,32 @@
 			};
 			name = Debug;
 		};
+		0C0AD4842DCEACA97539BA19C26FD606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 977894121203224FB1E01E1627662547 /* Pods-StyleCamera.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		2D6505E4F84AB187E42E7D1F17C02FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80DB6C08B9B312D2B623E23F6515C0A5 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = A2BEF8DE17371DB41FB3153570E00993 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -524,6 +735,29 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		30EB81F097F83C0A072491E60553F466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 803861154DAE26A5093F0D544D1FEC0E /* Pods-StyleCamera.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		3200FEB2614DF976E80052C8B3655168 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -588,29 +822,6 @@
 			};
 			name = Release;
 		};
-		57CD2A1AB5F3E12C6AE89C9BB8F28EFA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 977894121203224FB1E01E1627662547 /* Pods-StyleCamera.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		5B04A54B529628A790726EBAD71C8C6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC03C919D1BAFE1EE122A5C575741FBF /* CCCUIKit.xcconfig */;
@@ -636,7 +847,7 @@
 		};
 		81D27BBFE39221A11085CC94C71E9978 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80DB6C08B9B312D2B623E23F6515C0A5 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = A2BEF8DE17371DB41FB3153570E00993 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -657,28 +868,28 @@
 			};
 			name = Release;
 		};
-		D608354DCDE794418AE42D3D0A06ACF6 /* Release */ = {
+		D16FD35D7C681322B639E577CC2C5643 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 803861154DAE26A5093F0D544D1FEC0E /* Pods-StyleCamera.release.xcconfig */;
+			baseConfigurationReference = 85B7E96B85CCECAECF742401E61CCF9E /* ActionSheetPicker-3.0.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -701,20 +912,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B6E308E350D429FF705FED5822AC7AD /* Build configuration list for PBXNativeTarget "Pods-StyleCamera" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				57CD2A1AB5F3E12C6AE89C9BB8F28EFA /* Debug */,
-				D608354DCDE794418AE42D3D0A06ACF6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		6B44251FA50022CA55D4B2FBE1468C76 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D6505E4F84AB187E42E7D1F17C02FC3 /* Debug */,
 				81D27BBFE39221A11085CC94C71E9978 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842EEB60EB92EC122F52AB1E08F6D398 /* Build configuration list for PBXNativeTarget "Pods-StyleCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C0AD4842DCEACA97539BA19C26FD606 /* Debug */,
+				30EB81F097F83C0A072491E60553F466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC2ED7457B54BD9FD736B9FF543F851E /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D16FD35D7C681322B639E577CC2C5643 /* Debug */,
+				002DDB709F832F73F9713ACD248E28F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
