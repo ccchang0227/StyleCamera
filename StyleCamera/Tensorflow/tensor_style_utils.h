@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreVideo/CoreVideo.h>
 
 #import "ios_image_load.h"
 #import "tensorflow_utils.h"
@@ -65,6 +66,10 @@ UIKIT_EXTERN UIImage *createImageFromImageData(ImageData *imageData,
 - (void)setRatio:(float)ratio forStyleAtIndex:(int)index;
 - (void)selectStyle:(int)index;
 - (void)clearStyle;
+
+- (CVPixelBufferRef)performStyleTransferWithPixelBuffer:(CVPixelBufferRef)pixelBuffer
+                                   preferredOutputWidth:(int)outputWidth
+                                  preferredOutputHeight:(int)outputHeight;
 
 - (ImageData *)performStyleTransferWithCGImage:(CGImageRef)image;
 - (ImageData *)performStyleTransferWithResourceName:(NSString *)resourceName

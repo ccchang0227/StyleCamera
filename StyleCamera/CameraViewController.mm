@@ -17,6 +17,8 @@
 @interface CameraViewController () <CCCStyleCameraViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {
     NSTimeInterval _previousFrameTime;
     CGFloat _fps;
+    
+    CGSize _previewSize;
 }
 
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *switchButton;
@@ -24,6 +26,7 @@
 @property (retain, nonatomic) IBOutlet CCCStyleCameraView *styleCameraView;
 @property (retain, nonatomic) IBOutlet UILabel *previewSizeLabel;
 @property (retain, nonatomic) IBOutlet UIButton *qualityButton;
+@property (retain, nonatomic) IBOutlet UIButton *scaleTypeButton;
 
 @property (retain, nonatomic) IBOutlet UIView *stylesView;
 @property (retain, nonatomic) IBOutlet UICollectionView *stylesCollectionView;
@@ -44,6 +47,7 @@
     
     _previousFrameTime = 0;
     _fps = 0;
+    _previewSize = CGSizeZero;
     _selectedStyle = 0;
     
     _tensorStyleUtils = [[tensor_style_utils alloc] init];
@@ -72,6 +76,7 @@
     [_qualityButton release];
     [_stylesCollectionView release];
     [_stylesView release];
+    [_scaleTypeButton release];
     [super dealloc];
 }
 
@@ -87,6 +92,7 @@
     
     _previousFrameTime = 0;
     _fps = 0;
+    _previewSize = CGSizeZero;
     [self.styleCameraView startCameraRunning];
     
     self.fpsTimer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(displayFps:) userInfo:nil repeats:YES];
@@ -118,6 +124,7 @@
     self.previewSizeLabel.text = nil;
     
     [self configureQuality];
+    [self configureScaleType];
     
 }
 
@@ -163,13 +170,27 @@
     
 }
 
+- (void)configureScaleType {
+    switch (self.styleCameraView.scaleType) {
+        case CCCCameraPreviewScaleTypeScaleAspectFit: {
+            [self.scaleTypeButton setImage:[UIImage imageNamed:@"aspect_fit"] forState:UIControlStateNormal];
+            break;
+        }
+        default: {
+            [self.scaleTypeButton setImage:[UIImage imageNamed:@"aspect_fill"] forState:UIControlStateNormal];
+            break;
+        }
+    }
+    
+}
+
 // 顯示FPS
 - (void)displayFps:(NSTimer *)theTimer {
     if (_fps == 0) {
         return;
     }
     
-    self.previewSizeLabel.text = [NSString stringWithFormat:@"%ldx%ld, %.1f fps", (long)self.styleCameraView.cameraSession.currentPreviewSize.width, (long)self.styleCameraView.cameraSession.currentPreviewSize.height, _fps];
+    self.previewSizeLabel.text = [NSString stringWithFormat:@"%ldx%ld, %.1f fps", (long)_previewSize.width, (long)_previewSize.height, _fps];
 }
 
 #pragma mark - Button Actions
@@ -181,6 +202,7 @@
     
     _previousFrameTime = 0;
     _fps = 0;
+    _previewSize = CGSizeZero;
     self.previewSizeLabel.text = nil;
     
     switch (self.styleCameraView.cameraDevice) {
@@ -236,6 +258,21 @@
     self.stylesView.hidden = !self.stylesView.hidden;
 }
 
+- (IBAction)changeScaleTypeAction:(id)sender {
+    switch (self.styleCameraView.scaleType) {
+        case CCCCameraPreviewScaleTypeScaleAspectFit: {
+            self.styleCameraView.scaleType = CCCCameraPreviewScaleTypeScaleAspectFill;
+            break;
+        }
+        default: {
+            self.styleCameraView.scaleType = CCCCameraPreviewScaleTypeScaleAspectFit;
+            break;
+        }
+    }
+    [self configureScaleType];
+    
+}
+
 #pragma mark - CCCStyleCameraViewDelegate
 
 - (void)cccStyleCameraViewDidStart:(CCCStyleCameraView *)cameraView {
@@ -247,6 +284,17 @@
 - (CVImageBufferRef)cccStyleCameraView:(CCCStyleCameraView *)cameraView
                         processPreviewWithBuffer:(CVImageBufferRef)imageBuffer {
     
+    if (_selectedStyle == 0) {
+        return imageBuffer;
+    }
+    
+    imageBuffer = (CVImageBufferRef)[self.tensorStyleUtils performStyleTransferWithPixelBuffer:(CVPixelBufferRef)imageBuffer preferredOutputWidth:160 preferredOutputHeight:0];
+    
+    return imageBuffer;
+}
+
+- (CIImage *)cccStyleCameraView:(CCCStyleCameraView *)cameraView processPreviewWithCIImage:(CIImage *)previewImage {
+    
     // 計算FPS
     if (_previousFrameTime == 0) {
         _previousFrameTime = [NSDate date].timeIntervalSince1970;
@@ -257,15 +305,10 @@
         _previousFrameTime = currentFrameTime;
     }
     
-    if (_selectedStyle == 0) {
-        return imageBuffer;
-    }
+    _previewSize = previewImage.extent.size;
     
-    //TODO: 合上tensorflow?
-    
-    return imageBuffer;
+    return previewImage;
 }
-
 
 #pragma mark - UICollectionViewDataSource
 
@@ -293,6 +336,7 @@
     else {
         [self.tensorStyleUtils selectStyle:(int)(indexPath.item-1)];
     }
+    [self selectStyleAction:nil];
     
 }
 
