@@ -61,6 +61,7 @@
 #if !__has_feature(objc_arc)
     [_eaglContext release];
     [_videoPreviewView release];
+    [_ciContext release];
     [super dealloc];
 #endif
     
@@ -112,7 +113,7 @@
     
 }
 
-- (void)_renderImage:(CIImage*)image {
+- (void)_renderImage:(CIImage*)image scaleType:(CCCCameraPreviewScaleType)scaleType {
     CGRect sourceExtent = image.extent;
     
     CGFloat sourceAspect = sourceExtent.size.width/sourceExtent.size.height;
@@ -120,15 +121,33 @@
     
     // we want to maintain the aspect radio of the screen size, so we clip the video image
     CGRect drawRect = sourceExtent;
-    if (sourceAspect > previewAspect) {
-        // use full height of the video image, and center crop the width
-        drawRect.origin.x += (drawRect.size.width-drawRect.size.height*previewAspect)/2.0;
-        drawRect.size.width = drawRect.size.height*previewAspect;
-    }
-    else {
-        // use full width of the video image, and center crop the height
-        drawRect.origin.y += (drawRect.size.height-drawRect.size.width/previewAspect)/2.0;
-        drawRect.size.height = drawRect.size.width/previewAspect;
+    switch (scaleType) {
+        case CCCCameraPreviewScaleTypeScaleAspectFit: {
+            if (sourceAspect <= previewAspect) {
+                // use full height of the video image, and center crop the width
+                drawRect.origin.x += (drawRect.size.width-drawRect.size.height*previewAspect)/2.0;
+                drawRect.size.width = drawRect.size.height*previewAspect;
+            }
+            else {
+                // use full width of the video image, and center crop the height
+                drawRect.origin.y += (drawRect.size.height-drawRect.size.width/previewAspect)/2.0;
+                drawRect.size.height = drawRect.size.width/previewAspect;
+            }
+            break;
+        }
+        default: {
+            if (sourceAspect > previewAspect) {
+                // use full height of the video image, and center crop the width
+                drawRect.origin.x += (drawRect.size.width-drawRect.size.height*previewAspect)/2.0;
+                drawRect.size.width = drawRect.size.height*previewAspect;
+            }
+            else {
+                // use full width of the video image, and center crop the height
+                drawRect.origin.y += (drawRect.size.height-drawRect.size.width/previewAspect)/2.0;
+                drawRect.size.height = drawRect.size.width/previewAspect;
+            }
+            break;
+        }
     }
     
     [_videoPreviewView bindDrawable];
@@ -569,20 +588,17 @@
 - (CIImage*)_processedImageFromSampleBuffer:(CMSampleBufferRef)sampleBuffer {
     CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     
-    /*
-    size_t w, h;
-    CVPixelBufferLockBaseAddress(imageBuffer, 0);
+    CVImageBufferRef processedImageBuffer = imageBuffer;
+    if (_delegate && [_delegate respondsToSelector:@selector(cccStyleCameraView:processPreviewWithBuffer:)]) {
+        processedImageBuffer = [_delegate cccStyleCameraView:self processPreviewWithBuffer:imageBuffer];
+    }
     
-    w = CVPixelBufferGetWidth(imageBuffer);
-    h = CVPixelBufferGetHeight(imageBuffer);
-    
-    CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
-    */
-    
-    //TODO: 合上tensorflow?
-    
-    CIImage *sourceImage = [CIImage imageWithCVPixelBuffer:(CVPixelBufferRef)imageBuffer options:nil];
+    CIImage *sourceImage = [CIImage imageWithCVPixelBuffer:(CVPixelBufferRef)processedImageBuffer options:nil];
     CGSize imageSize = CGSizeMake(CGRectGetHeight(sourceImage.extent), CGRectGetWidth(sourceImage.extent));
+    
+    if (processedImageBuffer != imageBuffer) {
+        CFRelease(processedImageBuffer);
+    }
     
     CGAffineTransform transform = CGAffineTransformTranslate(CGAffineTransformMakeRotation(-M_PI_2), -CGRectGetWidth(sourceImage.extent), 0);
     if (_cameraSession.cameraDevice == CCCCameraDeviceFront) {
@@ -593,6 +609,10 @@
     [filter setValue:sourceImage forKey:kCIInputImageKey];
     [filter setValue:[NSValue value:&transform withObjCType:@encode(CGAffineTransform)] forKey:@"inputTransform"];
     sourceImage = [filter.outputImage imageByCroppingToRect:CGRectMake(0, 0, imageSize.width, imageSize.height)];
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(cccStyleCameraView:processPreviewWithCIImage:)]) {
+        sourceImage = [_delegate cccStyleCameraView:self processPreviewWithCIImage:sourceImage];
+    }
     
     return sourceImage;
 }
@@ -905,7 +925,7 @@
     }
     
     CIImage *image = [self _processedImageFromSampleBuffer:sampleBuffer];
-    [self.preview _renderImage:image];
+    [self.preview _renderImage:image scaleType:self.scaleType];
     
 }
 

@@ -1,7 +1,9 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.2.0)
   - CCCUIKit/CCCCamera (1.0.4-beta)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
   - CCCUIKit/CCCCamera (from `~/Desktop/iOS/Pods/CCCUIKit`)
 
 EXTERNAL SOURCES:
@@ -9,8 +11,9 @@ EXTERNAL SOURCES:
     :path: "~/Desktop/iOS/Pods/CCCUIKit"
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   CCCUIKit: 1d31f7355ab5fad8806e8d348a956e3ce7e8e248
 
-PODFILE CHECKSUM: d934cba0577a962216023d74a2f756100e634ccd
+PODFILE CHECKSUM: 1480811724654866400c15dcf453a4080e602f0e
 
 COCOAPODS: 1.2.0

@@ -9,5 +9,6 @@ target 'StyleCamera' do
 
   # Pods for StyleCamera
   pod 'CCCUIKit/CCCCamera', :path => '~/Desktop/iOS/Pods/CCCUIKit'
+  pod 'ActionSheetPicker-3.0'
 
 end
