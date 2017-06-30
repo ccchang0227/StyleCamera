@@ -64,9 +64,9 @@
 		90D04C741EF8EFED00133EE1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90D04C781EF8F02D00133EE1 /* CCCStyleCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCStyleCameraView.h; sourceTree = "<group>"; };
 		90D04C791EF8F02D00133EE1 /* CCCStyleCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCStyleCameraView.m; sourceTree = "<group>"; };
-		90D04C7D1EF917FE00133EE1 /* libtensorflow-core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtensorflow-core.a"; path = "../../../../tensorflow_ios_lib/lib/libtensorflow-core.a"; sourceTree = "<group>"; };
-		90D04C7F1EF9182500133EE1 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "../../../../tensorflow_ios_lib/protobuf_ios/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
-		90D04C801EF9182500133EE1 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = ../../../../tensorflow_ios_lib/protobuf_ios/lib/libprotobuf.a; sourceTree = "<group>"; };
+		90D04C7D1EF917FE00133EE1 /* libtensorflow-core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtensorflow-core.a"; path = "../../../../tensorflow/tensorflow/contrib/makefile/gen_ios/lib/libtensorflow-core.a"; sourceTree = "<group>"; };
+		90D04C7F1EF9182500133EE1 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "../../../../tensorflow/tensorflow/contrib/makefile/gen_ios/protobuf_ios/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
+		90D04C801EF9182500133EE1 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = ../../../../tensorflow/tensorflow/contrib/makefile/gen_ios/protobuf_ios/lib/libprotobuf.a; sourceTree = "<group>"; };
 		90D04C831EF91B9D00133EE1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		90D04C861EF91E7E00133EE1 /* stylize_quantized.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = stylize_quantized.pb; sourceTree = "<group>"; };
 		90D04C871EF91E7E00133EE1 /* tensorflow_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tensorflow_utils.h; sourceTree = "<group>"; };
@@ -434,7 +434,7 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TENSORFLOW_LIB_ROOT = "$(HOME)/Desktop/tensorflow_ios_lib";
+				TENSORFLOW_LIB_ROOT = "$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/gen_ios";
 				TENSORFLOW_ROOT = "$(HOME)/Desktop/tensorflow";
 			};
 			name = Debug;
@@ -494,7 +494,7 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TENSORFLOW_LIB_ROOT = "$(HOME)/Desktop/tensorflow_ios_lib";
+				TENSORFLOW_LIB_ROOT = "$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/gen_ios";
 				TENSORFLOW_ROOT = "$(HOME)/Desktop/tensorflow";
 				VALIDATE_PRODUCT = YES;
 			};
