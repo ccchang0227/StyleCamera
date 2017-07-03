@@ -158,7 +158,6 @@ void stillImageDataReleaseCallback(void *releaseRefCon, const void *baseAddress)
     const float input_mean = 0.0f;//117.0f;
     const float input_std = 255.0f;//1.0f;
     
-    // FIXME: Converted pixel is not same as the original.
     tensorflow::Tensor image_tensor(tensorflow::DT_FLOAT,
                                     tensorflow::TensorShape({1, wanted_height, wanted_width, wanted_channels}));
     auto image_tensor_mapped = image_tensor.tensor<float, 4>();
@@ -173,7 +172,7 @@ void stillImageDataReleaseCallback(void *releaseRefCon, const void *baseAddress)
             const int in_x = (x * image_width) / wanted_width;
             tensorflow::uint8* in_pixel = in_row + (in_x * image_channels);
             float* out_pixel = out_row + (x * wanted_channels);
-            for (int c = 0; c < wanted_channels; ++c) {
+            for (int c = (doReverseChannels?1:0); c < wanted_channels; ++c) {
                 out_pixel[c] = (in_pixel[c] - input_mean) / input_std;
             }
         }
@@ -195,9 +194,16 @@ void stillImageDataReleaseCallback(void *releaseRefCon, const void *baseAddress)
     ARGBPixel *bitmapData = (ARGBPixel *)calloc((wanted_width*wanted_height), sizeof(ARGBPixel));
     for (int i = 0; i < (wanted_width*wanted_height); i ++) {
         bitmapData[i].alpha = 255;
-        bitmapData[i].red = ((UInt8) (floatValues((i * 3)) * 255));
-        bitmapData[i].green = ((UInt8) (floatValues((i * 3 + 1)) * 255));
-        bitmapData[i].blue = ((UInt8) (floatValues((i * 3 + 2)) * 255));
+        if (!doReverseChannels) {
+            bitmapData[i].blue = ((UInt8) (floatValues((i * 3)) * 255));
+            bitmapData[i].green = ((UInt8) (floatValues((i * 3 + 1)) * 255));
+            bitmapData[i].red = ((UInt8) (floatValues((i * 3 + 2)) * 255));
+        }
+        else {
+            bitmapData[i].red = ((UInt8) (floatValues((i * 3)) * 255));
+            bitmapData[i].green = ((UInt8) (floatValues((i * 3 + 1)) * 255));
+            bitmapData[i].blue = ((UInt8) (floatValues((i * 3 + 2)) * 255));
+        }
     }
     
     CVPixelBufferRef newBuffer = NULL;
