@@ -64,9 +64,9 @@
 		90D04C741EF8EFED00133EE1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90D04C781EF8F02D00133EE1 /* CCCStyleCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCStyleCameraView.h; sourceTree = "<group>"; };
 		90D04C791EF8F02D00133EE1 /* CCCStyleCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCStyleCameraView.m; sourceTree = "<group>"; };
-		90D04C7D1EF917FE00133EE1 /* libtensorflow-core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtensorflow-core.a"; path = "../../../../tensorflow/tensorflow/contrib/makefile/gen_ios/lib/libtensorflow-core.a"; sourceTree = "<group>"; };
-		90D04C7F1EF9182500133EE1 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "../../../../tensorflow/tensorflow/contrib/makefile/gen_ios/protobuf_ios/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
-		90D04C801EF9182500133EE1 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = ../../../../tensorflow/tensorflow/contrib/makefile/gen_ios/protobuf_ios/lib/libprotobuf.a; sourceTree = "<group>"; };
+		90D04C7D1EF917FE00133EE1 /* libtensorflow-core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtensorflow-core.a"; path = "../../Tensorflow_lib/makefile/gen_ios/lib/libtensorflow-core.a"; sourceTree = "<group>"; };
+		90D04C7F1EF9182500133EE1 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "../../Tensorflow_lib/makefile/gen_ios/protobuf_ios/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
+		90D04C801EF9182500133EE1 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = ../../Tensorflow_lib/makefile/gen_ios/protobuf_ios/lib/libprotobuf.a; sourceTree = "<group>"; };
 		90D04C831EF91B9D00133EE1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		90D04C861EF91E7E00133EE1 /* stylize_quantized.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = stylize_quantized.pb; sourceTree = "<group>"; };
 		90D04C871EF91E7E00133EE1 /* tensorflow_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tensorflow_utils.h; sourceTree = "<group>"; };
@@ -415,9 +415,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/downloads/protobuf/src",
-					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/downloads",
-					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/downloads/eigen",
+					"$(TENSORFLOW_ROOT)/makefile/downloads/protobuf/src",
+					"$(TENSORFLOW_ROOT)/makefile/downloads",
+					"$(TENSORFLOW_ROOT)/makefile/downloads/eigen",
 					"$(TENSORFLOW_LIB_ROOT)/proto",
 					"$(TENSORFLOW_ROOT)",
 				);
@@ -434,8 +434,8 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TENSORFLOW_LIB_ROOT = "$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/gen_ios";
-				TENSORFLOW_ROOT = "$(HOME)/Desktop/tensorflow";
+				TENSORFLOW_LIB_ROOT = "$(TENSORFLOW_ROOT)/makefile/gen_ios";
+				TENSORFLOW_ROOT = "$(PROJECT_DIR)/Tensorflow_lib";
 			};
 			name = Debug;
 		};
@@ -476,9 +476,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/downloads/protobuf/src",
-					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/downloads",
-					"$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/downloads/eigen",
+					"$(TENSORFLOW_ROOT)/makefile/downloads/protobuf/src",
+					"$(TENSORFLOW_ROOT)/makefile/downloads",
+					"$(TENSORFLOW_ROOT)/makefile/downloads/eigen",
 					"$(TENSORFLOW_LIB_ROOT)/proto",
 					"$(TENSORFLOW_ROOT)",
 				);
@@ -494,8 +494,8 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TENSORFLOW_LIB_ROOT = "$(TENSORFLOW_ROOT)/tensorflow/contrib/makefile/gen_ios";
-				TENSORFLOW_ROOT = "$(HOME)/Desktop/tensorflow";
+				TENSORFLOW_LIB_ROOT = "$(TENSORFLOW_ROOT)/makefile/gen_ios";
+				TENSORFLOW_ROOT = "$(PROJECT_DIR)/Tensorflow_lib";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
